@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Shiv Patel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for the Project page layout */
+        .project-entry {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .project-entry:last-child {
+            border-bottom: none;
+        }
+        .project-entry h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .project-img-container {
+            width: 100%;
+            /* Removes fixed height so image scales naturally */
+            background-color: #fff; 
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        .project-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Shiv Patel</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="competitions.html">Competitions</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="max-width: 900px; margin: 2rem auto; padding: 0 20px;">
+        
+        <h1 style="margin-bottom: 2rem;">Projects</h1>
+
+        <div class="project-entry">
+            <h2>Aircraft Design - DA50 RG</h2>
+            
+            <div class="project-img-container">
+                <img src="project1.jpg" alt="DA50 RG 3D Model and Render">
+            </div>
+
+            <p>The DA 50 RG Plane Design Project successfully culminated in the creation of a detailed 3D model, reflecting a personal commitment to exploring aircraft design through CAD software. The project achieved its primary goals of applying aerodynamic principles and modeling techniques to construct a representation of the DA 50 RG plane, with accurate dimensions such as a 38.3-feet wingspan and 29-feet fuselage length. The design process, spanning preliminary research, and CAD modeling resulted in a cohesive model that showcases the aircraft's sleek carbon fiber airframe and unique wing and stabilizer design.</p>
+            <br>
+            <p>Undertaking this project as a self-directed endeavor has been immensely rewarding, offering valuable insights into the complexities of aircraft design and 3D modeling. The challenges of aligning components and refining aerodynamics deepened my technical skills, while the freedom to explore without academic constraints fostered creativity. This experience has not only enhanced my proficiency with CATIA tools but also ignited a passion for further exploring aviation design, with potential future enhancements in mind to refine the model further, and to come explore designing of various other aircrafts, especially military origin ones.</p>
+        </div>
+
+        <div class="project-entry">
+            <h2>The Wing + Tail Skeletal Design</h2>
+            
+            <div class="project-img-container">
+                <img src="project2.jpg" alt="Wing Skeleton CAD Analysis">
+            </div>
+
+            <p>This is the wing design of the aircraft for the RC3 Competition, which was 3-D modelled on CATIA V5. A detailed analysis of the sizing of the wing and the stabilizers was done using the constraints given, and also matching the real life speculations of the wing. This is wing has an aspect ratio of 6 which provides a stable and high lift profile for the airplane.</p> 
+            <br>
+            <p>The wing also uses NACA 2412 airfoil which provides the high lift profile property for the airplane and allowing shorter take offs and stable level flight. The internal configuration incorporates spars and ribs, reflecting realistic load distribution and structural integrity. Both horizontal and vertical stabilizers are proportioned for aerodynamic balance and control authority. Emphasis was placed on weight optimization and structural efficiency, creating a design that merges aerodynamic performance with manufacturability and competition readiness.</p>
+            <br>
+            <p>This project inspired me to design more aircrafts and build on my passion for manufacturing RC planes which aligns with my interest of working in an aircraft manufacturing company as an manufacturing engineer where I could help with the design of the aircraft and also help with manufacturing them on a larger scale.</p>
+        </div>
+
+        <div class="project-entry">
+            <h2>The Walking Robot</h2>
+            
+            <div class="project-img-container">
+                <img src="project3.jpg" alt="Walking Robot Mechanism and Assembly">
+            </div>
+            
+            <p>In this project, I contributed to the complete design, analysis, and fabrication of a four-legged walking robot utilizing a synchronized double crank-rocker mechanism—a six-bar linkage system engineered for stability and smooth terrain navigation. The robot is powered by a high-efficiency motor with a 126:1 gear ratio, selected to optimize torque and crank speed. During the research phase, our team evaluated three potential mechanisms—Crank-Rocker, Crank-Slider, and Double Crank-Rocker—by simulating their kinematic behavior in MATLAB, followed by a weighted design matrix assessment based on performance, manufacturability, and adaptability. The double crank-rocker design excelled in simplicity, speed, and material efficiency, making it ideal for our robotic configuration.</p>
+            <br>
+            <p>The finalized design features two four-bar linkages phased 180° apart, enabling a crawling-like gait while ensuring continuous ground contact from at least one leg at all times. Displacement and velocity analysis were performed in MATLAB to validate motion stability, and link angular velocity data helped fine-tune the gait cycle. The mechanical structure was 3D-modeled in CATIA V5 to assess part positioning and spatial tolerances, then laser-cut from 8mm MDF for lightweight, rigid assembly. The motor and battery system were housed in a custom-designed casing using friction-fit integration to reduce adhesive use and overall mass.</p>
+            <br>
+            <p>This project deepened my understanding of mechanical linkages, motion simulation, and precision manufacturing. It also demonstrated how careful mechanism selection, analytical validation, and CAD-based design integration can produce a stable, functional prototype for real-world robotic applications.</p>
+        </div>
+
+        <div class="project-entry">
+            <h2>Flight Simulator</h2>
+
+            <div class="project-img-container">
+                <img src="project4.jpg" alt="Flight Simulator MATLAB and Joystick">
+            </div>
+
+            <p>As part of a team-led aerospace simulation initiative, I contributed to the development of a high-fidelity 6 degrees-of-freedom (6DOF) physics engine for a flight simulator tailored to a newly conceptualized narrow-body twinjet airliner, designed to compete with the Boeing 737 and Airbus A320. The simulator was developed using MATLAB and Simulink, with a modular design architecture that accurately models translational and rotational dynamics, control surface deflections, engine thrust response, and aerodynamic forces derived from CFD and wind tunnel data.</p>
+            <br>
+            <p>I was involved in implementing structured MATLAB scripts for force, moment, and navigation equations, and integrating these into a Simulink-based block diagram system. This engine processes real-time pilot inputs—including throttle, aileron, elevator, and rudder commands—and outputs aircraft states such as Euler angles, body rates, velocity vectors, and GPS coordinates. It also features Runge-Kutta numerical integration and supports external integration with FlightGear for visualization and joystick-based manual control. This project not only strengthened my understanding of flight dynamics and control systems, but also enhanced my skills in mathematical modeling, systems engineering, and real-time simulation, laying a strong foundation for future work in aerospace software development and training technologies.</p>
+        </div>
+
+        <div class="project-entry">
+            <h2>Gear Box Reverse Engineering</h2>
+
+            <div class="project-img-container">
+                <img src="project5.jpg" alt="Gear Box Technical Drawings">
+            </div>
+
+            <p>The goal of this project was to design and reverse engineer a gearbox that improves upon the client’s existing product for the robot combat community. The primary goals were to achieve high performance, minimizing cost, and ensuring a well designed product. For design, we needed to maintain the same gear ratio while ensuring the compatibility with the other components of the existing gearbox, as well as considering its assembly, size, shape, and durability. In terms of performance, the gear box had to be efficient, capable of handling high loads, maintaining optimal thermal performance while reducing noise and vibration. Lastly, for cost the selection of material should be affordable and the manufacturing process must stay within budget.</p>
+            <br>
+            <p>I took the role of designing the parts of the gearbox matching the constraints with the real gearbox. I also helped with the designing of the new gear box with the changes researched by the team members.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shiv Patel</p>
+    </footer>
+</body>
+</html>

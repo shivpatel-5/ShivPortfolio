@@ -6,44 +6,58 @@
     <title>Volunteering - Shiv Patel</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Dark Mode Volunteering Styles */
         .vol-section {
-            margin-bottom: 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
         }
-        .vol-section:last-child {
-            border-bottom: none;
+
+        .vol-section:hover {
+            transform: translateY(-5px);
+            border-color: #ff0050;
+            box-shadow: 0 10px 30px rgba(255, 0, 80, 0.1);
         }
+
         .vol-header {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
         }
+
         .vol-header h2 {
-            color: #2c3e50;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
+            letter-spacing: 1px;
         }
+
         .vol-header h3 {
-            color: #7f8c8d;
+            color: #ff0050; /* Neon Red Accent */
             font-size: 1.1rem;
-            font-weight: normal;
+            font-weight: 400;
+            text-transform: uppercase;
         }
         
-        /* Layout for the 3 FuturENG images */
+        /* Image Layouts */
         .gallery-grid {
             display: grid;
             gap: 15px;
             margin-bottom: 1.5rem;
         }
         
-        /* Top row: The wide group photo */
         .group-photo {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            border: 1px solid #eee;
+            border-radius: 4px;
+            border: 1px solid #333;
+            opacity: 0.9;
         }
 
-        /* Bottom row: Two images side-by-side */
         .split-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -52,9 +66,17 @@
         .split-row img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            border: 1px solid #eee;
+            border-radius: 4px;
+            border: 1px solid #333;
             object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .vol-section:hover img { opacity: 1; }
+
+        p {
+            color: #ccc;
+            line-height: 1.8;
         }
 
         @media (max-width: 600px) {
@@ -66,23 +88,26 @@
 
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">Shiv Patel</a>
+            <a href="index.html" class="logo">Shiv <span>Patel</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="competitions.html">Competitions</a></li>
+                <li><a href="student-clubs.html">Clubs</a></li>
+                <li><a href="volunteering.html">Volunteering</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </nav>
 
-    <main style="max-width: 900px; margin: 2rem auto; padding: 0 20px;">
+    <main style="max-width: 900px; margin: 8rem auto 4rem auto; padding: 0 20px;">
         
-        <h1 style="margin-bottom: 2rem;">Volunteering & Outreach</h1>
+        <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 3rem; text-align: center;">VOLUNTEERING</h1>
 
         <div class="vol-section">
             <div class="vol-header">
                 <h2>FuturENG - Women In STEM</h2>
-                <h3>Mentor | Faculty of Engineering and Architectural Science (FEAS)</h3>
+                <h3>Mentor | FEAS</h3>
             </div>
 
             <div class="gallery-grid">
@@ -96,7 +121,7 @@
 
             <p>On November 16, 2024, I had the privilege of serving as a mentor at FuturENG, an outreach initiative hosted by the Faculty of Engineering and Architectural Science (FEAS) at Toronto Metropolitan University, supported by Hydro-One through the WEMADEIT program. This event was designed to engage and inspire female high school students (Grades 9–12) through immersive, hands-on workshops centered around electric vehicle design and prototyping using materials developed in our university’s advanced engineering labs.</p>
             <br>
-            <p>As a mentor, I actively guided students through the design and manufacturing challenges they encountered, encouraging creative problem-solving and offering insight into real-world engineering workflows. I took the initiative to connect with students on a personal level—learning about their prior STEM experiences and helping them translate curiosity into tangible engineering solutions. Whether supporting beginners or more experienced learners, my role was to foster confidence and spark lasting interest in engineering disciplines.</p>
+            <p>As a mentor, I actively guided students through the design and manufacturing challenges they encountered, encouraging creative problem-solving and offering insight into real-world engineering workflows. I took the initiative to connect with students on a personal level—learning about their prior STEM experiences and helping them translate curiosity into tangible engineering solutions.</p>
             <br>
             <p>This experience deepened my passion for STEM outreach and highlighted the impact of mentorship in promoting diversity and inclusion within engineering. Seeing young students collaborate, innovate, and grow in a single day was truly inspiring, and I’m grateful to have contributed to an event that empowers the next generation of engineers.</p>
         </div>
@@ -115,7 +140,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Shiv Patel</p>
+        <p>&copy; 2024 Shiv Patel. Designed with Precision.</p>
     </footer>
 </body>
 </html>

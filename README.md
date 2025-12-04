@@ -2,7 +2,7 @@
 
 > A showcase of engineering design, innovation, and collaborative problem-solving.
 
-##  [Click Here to View My Live Portfolio](https://risk-coverz.github.io/ShivPortfolio/)
+##  [Click Here to View My Live Portfolio](https://shivpatel-5.github.io/ShivPortfolio/)
 
 ### Technologies & Tools
 ![CATIA](https://img.shields.io/badge/CATIA-V5-blue)

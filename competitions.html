@@ -16,7 +16,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Hover Effect: Neon Glow */
         .comp-entry:hover {
             transform: translateY(-5px);
             border-color: #ff0050;
@@ -31,6 +30,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .comp-header h2 {
@@ -42,14 +42,37 @@
         }
 
         .comp-header h3 {
-            color: #ff0050; /* Neon Red */
+            color: #ff0050;
             font-size: 1.2rem;
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        /* Image Styling */
+        /* PDF Button Style */
+        .pdf-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgba(255, 0, 80, 0.1);
+            border: 1px solid #ff0050;
+            color: #ff0050;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .pdf-btn:hover {
+            background: #ff0050;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 80, 0.6);
+        }
+
+        .pdf-btn i { margin-right: 8px; }
+
+        /* Images */
         .comp-img-container {
             width: 100%;
             margin-bottom: 2rem;
@@ -62,16 +85,12 @@
             width: 100%;
             height: auto;
             display: block;
-            opacity: 0.85; /* Slightly dim by default */
-            transition: opacity 0.3s ease, transform 0.5s ease;
+            opacity: 0.85;
+            transition: 0.3s;
         }
 
-        .comp-entry:hover .comp-img-container img {
-            opacity: 1;
-            transform: scale(1.01);
-        }
+        .comp-entry:hover .comp-img-container img { opacity: 1; }
 
-        /* Grid for multiple images */
         .comp-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -81,49 +100,25 @@
         
         .comp-grid img {
             width: 100%;
-            height: 300px;
+            height: 350px; /* Fixed height for clean grid */
             object-fit: cover;
             border-radius: 4px;
             border: 1px solid #333;
-        }
-
-        p {
-            color: #ccc;
-            line-height: 1.8;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .highlight-text {
-            color: #fff;
-            font-weight: bold;
-        }
-
-        /* PDF Download Button */
-        .pdf-btn {
-            display: inline-block;
-            background-color: transparent;
-            border: 2px solid #ff0050;
-            color: #ff0050;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.9rem;
-            border-radius: 4px;
+            opacity: 0.85;
             transition: 0.3s;
-            margin-top: 1rem;
         }
+        
+        .comp-entry:hover .comp-grid img { opacity: 1; }
 
-        .pdf-btn:hover {
-            background-color: #ff0050;
-            color: #fff;
-            box-shadow: 0 0 15px rgba(255, 0, 80, 0.5);
-        }
+        p { color: #ccc; line-height: 1.8; margin-bottom: 1rem; }
+        .highlight-text { color: #fff; font-weight: bold; }
 
         @media (max-width: 768px) {
             .comp-grid { grid-template-columns: 1fr; }
+            .comp-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -142,7 +137,6 @@
     </nav>
 
     <main style="max-width: 1000px; margin: 8rem auto 4rem auto; padding: 0 20px;">
-        
         <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 4rem; text-align: center; color: #fff;">COMPETITIONS</h1>
 
         <div class="comp-entry">
@@ -152,29 +146,25 @@
                     <h3>CASI TMU Branch 2025</h3>
                 </div>
             </div>
-
             <div class="comp-img-container">
-                <img src="Comp1.jpg" alt="Astralis Competition Collage">
+                <img src="Comp1.jpg" alt="Astralis Competition">
             </div>
-
-            <p>As part of a three-member team, I competed in the <span class="highlight-text">Astralis: Future of Robotics</span> competition, hosted by CASI TMU, where we were tasked with addressing the increasingly urgent issue of space debris accumulation. Given just 12 hours, our challenge was to develop a comprehensive mitigation strategy following a hypothetical debris-generating collision in GEO.</p>
-            <p>Our concept involved deploying a network of <strong>orbit-based sensor modules</strong> to create a real-time data-sharing infrastructure capable of continuously monitoring the position and velocity of debris. We pitched our solution to industry professionals from organizations such as <strong>MDA Space, Rocket Lab, and NordSpace</strong>.</p>
+            <p>As part of a three-member team, I competed in the <span class="highlight-text">Astralis: Future of Robotics</span> competition, developing a mitigation strategy for space debris accumulation in LEO and GEO orbits.</p>
+            <p>Our concept deployed a network of <strong>orbit-based sensor modules</strong> to create a real-time data-sharing infrastructure. We pitched our solution to judges from <strong>MDA Space, Rocket Lab, and NordSpace</strong>.</p>
         </div>
 
         <div class="comp-entry">
             <div class="comp-header">
                 <div>
-                    <h2>CATIA C3 Aerospace Design Competition</h2>
+                    <h2>CATIA C3 Aerospace Design</h2>
                     <h3>1st Place - Senior Category</h3>
                 </div>
             </div>
-
             <div class="comp-img-container">
-                <img src="Comp2.jpg" alt="Galforce Glider Design and Team">
+                <img src="Comp2.jpg" alt="Galforce Glider">
             </div>
-
-            <p>We secured <span class="highlight-text">1st Place in the Senior Category</span> for our innovative long-endurance glider design, <em>Galforce</em>. The challenge required participants to conceptualize and model a propulsion-free, 3-meter wingspan glider within an 8-hour time limit using CATIA V5.</p>
-            <p>I led the design of the <strong>fuselage and modular payload bay</strong>, selecting carbon-fiber-reinforced composites to minimize weight while protecting scientific instruments. This project challenged us to balance structural integrity and aerodynamic performance under strict time constraints.</p>
+            <p>We secured <span class="highlight-text">1st Place</span> for our innovative long-endurance glider design, <em>Galforce</em>. The challenge required conceptualizing a propulsion-free, 3-meter wingspan glider using CATIA V5.</p>
+            <p>I led the design of the <strong>fuselage and modular payload bay</strong>, utilizing carbon-fiber-reinforced composites to minimize weight while maintaining structural integrity.</p>
         </div>
 
         <div class="comp-entry">
@@ -189,21 +179,21 @@
             </div>
 
             <div class="comp-grid">
-                <img src="Glider4.jpg" alt="Glider Team Photo">
+                <img src="Glider2.jpg" alt="Glider Launch">
                 <img src="Glider1.jpg" alt="Shiv with Glider">
             </div>
 
-            <p>The goal of this project was to design and construct a glider aircraft capable of flying the furthest possible distance while maintaining a minimal weight. Utilizing materials provided during lab sessions, including a mold for the <strong>NACA M22 airfoil</strong>, we engineered a high-efficiency wing using composite manufacturing techniques.</p>
+            <p>The goal of this project was to design and construct a glider capable of flying the furthest possible distance while weighing the least. We utilized the <strong>NACA M22 airfoil</strong> and manufactured the wing using composite materials to optimize lift and durability.</p>
             
-            <p>Several requirements had to be met: the final design length had to be under 29.5 inches, fuselage width under 2 inches, and tail fin area less than 30% of the wing area. All components (excluding the wing) were custom-designed in CAD and manufactured using <strong>laser cutting and 3D printing</strong> to optimize weight and durability.</p>
+            <p>Requirements included a wingspan under 29.5 inches and a tail fin area less than 30% of the wing. All non-wing components were designed in CAD and manufactured using <strong>laser cutting and 3D printing</strong>.</p>
             
-            <p>The competition scored designs based on glide distance divided by final weight. Our final glider successfully survived all flight attempts, demonstrating robust structural integrity and aerodynamic stability.</p>
+            <p>The glider successfully survived all three flight attempts, demonstrating the effectiveness of our manufacturing process. The final design balanced structural integrity with aerodynamic efficiency.</p>
         </div>
 
     </main>
 
     <footer>
-        <p>&copy; Shiv Pinteshkumar Patel</p>
+        <p>&copy; 2024 Shiv Patel. Designed with Precision.</p>
     </footer>
 </body>
 </html>

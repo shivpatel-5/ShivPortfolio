@@ -6,7 +6,8 @@
     <title>Volunteering - Shiv Patel</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .vol-card {
+        /* Card Style */
+        .vol-entry {
             background-color: #111;
             border: 1px solid #333;
             padding: 2.5rem;
@@ -14,11 +15,19 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        .vol-card:hover {
+
+        .vol-entry:hover {
             transform: translateY(-5px);
             border-color: #ff0050;
             box-shadow: 0 10px 40px rgba(255, 0, 80, 0.15);
         }
+
+        .vol-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #222;
+            padding-bottom: 1.5rem;
+        }
+
         .vol-header h2 {
             color: #fff;
             font-family: 'Orbitron', sans-serif;
@@ -26,25 +35,40 @@
             margin-bottom: 0.5rem;
             letter-spacing: 1px;
         }
+
         .vol-header h3 {
             color: #ff0050;
             font-size: 1.2rem;
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 1.5rem;
         }
-        .vol-img-container {
+
+        /* Image Grid for FUTUR ENG */
+        .img-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
             margin-bottom: 2rem;
         }
-        .vol-img-container img {
+
+        .img-grid-3 img {
             width: 100%;
             height: auto;
+            object-fit: contain;
             border-radius: 4px;
             border: 1px solid #333;
             opacity: 0.9;
+            transition: 0.3s;
         }
+
+        .vol-entry:hover img { opacity: 1; transform: scale(1.01); }
+
         p { color: #ccc; line-height: 1.8; margin-bottom: 1rem; }
+        
+        @media (max-width: 768px) {
+            .img-grid-3 { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -64,25 +88,31 @@
     </nav>
 
     <main style="max-width: 1000px; margin: 8rem auto 4rem auto; padding: 0 20px;">
-        <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 4rem; text-align: center; color: #fff; text-shadow: 0 0 15px rgba(255,255,255,0.3);">VOLUNTEERING</h1>
-
-        <div class="vol-card">
-            <div class="vol-header">
-                <h2>FIRST Robotics Competition</h2>
-                <h3>Mentor & Alumni</h3>
-            </div>
-            
-            <p>I actively mentor high school students in the FIRST Robotics Competition, guiding them through the engineering design process, fabrication, and programming of competitive robots.</p>
-            <p>My role involves teaching technical skills in CAD and mechanical assembly, as well as fostering teamwork and problem-solving abilities. Giving back to the program that sparked my interest in engineering is incredibly rewarding.</p>
-        </div>
         
-        <div class="vol-card">
+        <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 4rem; text-align: center; color: #fff;">VOLUNTEERING & EXPERIENCE</h1>
+
+        <div class="vol-entry">
             <div class="vol-header">
-                <h2>STEM Outreach</h2>
-                <h3>Community Workshop Leader</h3>
+                <h2>Engineering Student Ambassador</h2>
+                <h3>FEAS Outreach | FuturENG Mentor</h3>
             </div>
-            
-            <p>I organize and lead workshops for local youth to introduce them to aerospace concepts. From bottle rockets to glider workshops, I aim to inspire the next generation of engineers by making science fun and accessible.</p>
+
+            <div class="img-grid-3">
+                <img src="Volunteer1jpg">
+                <img src="Volunteer2.jpg">
+                <img src="Volunteer3.jpg">
+            </div>
+            <p>On November 16th, FEAS Outreach hosted the 2024 <strong>"FuturENG"</strong> event for women in stem in grades 9-12, supported by HydroOne through the WEMADEIT program. As a mentor, I guided highly motivated female students as they explored the world of engineering through hands-on workshops.</p>
+            <p>I mentored students in crafting and designing <strong>electric vehicles</strong> using materials produced in our cutting-edge labs, helping them navigate challenges that arose during manufacturing and design. By sharing my own experiences and connecting with them on a personal level, I aimed to spark a passion for STEM and give them real insights into life as an engineering student.</p>
+        </div>
+
+        <div class="vol-entry">
+            <div class="vol-header">
+                <h2>Student Ambassador</h2>
+                <h3>TMU Open House</h3>
+            </div>
+            <p>As a Student Ambassador during the TMU Open House, I acted as the face of the university for thousands of visitors. I played a key role in creating a welcoming environment for potential applicants and their families.</p>
+            <p>I guided tours of our engineering facilities, provided detailed information about the aerospace program, and engaged visitors in meaningful conversations about the innovative and inclusive culture at Toronto Metropolitan University.</p>
         </div>
 
     </main>

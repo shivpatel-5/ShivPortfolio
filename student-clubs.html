@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Dark Mode Club Styles */
-        .club-section {
-            margin-bottom: 4rem;
-        }
+        .club-section { margin-bottom: 4rem; }
         
         .club-header {
             background-color: #1a1a1a;
             padding: 1.5rem;
-            border-left: 5px solid #ff0050; /* Neon Red Border */
+            border-left: 5px solid #ff0050;
             margin-bottom: 2rem;
             border-radius: 0 8px 8px 0;
             border-top: 1px solid #333;
@@ -23,84 +21,59 @@
         }
 
         .club-header h2 {
-            margin: 0;
-            color: #fff;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
-            letter-spacing: 1px;
+            margin: 0; color: #fff; font-family: 'Orbitron', sans-serif;
+            font-size: 2rem; letter-spacing: 1px;
         }
 
         .entry {
-            background-color: #111;
-            border: 1px solid #333;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            border-radius: 8px;
-            transition: transform 0.3s;
+            background-color: #111; border: 1px solid #333; padding: 2rem;
+            margin-bottom: 3rem; border-radius: 8px; transition: transform 0.3s;
         }
 
         .entry:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 0, 80, 0.1);
-            border-color: #ff0050;
+            box-shadow: 0 10px 30px rgba(255, 0, 80, 0.1); border-color: #ff0050;
         }
 
         .entry h3 {
-            color: #ff0050;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            color: #ff0050; font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem; margin-bottom: 1rem;
         }
         
         .role-title {
-            color: #00f2ea; /* Neon Cyan for Roles */
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: #00f2ea; font-size: 1.1rem; font-weight: bold;
+            margin-bottom: 1rem; display: block; text-transform: uppercase; letter-spacing: 1px;
         }
 
         /* Image Grids */
         .img-grid-4 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 1.5rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 1.5rem;
         }
-        .img-grid-4 img {
-            width: 100%;
-            height: auto; 
-            border-radius: 4px;
-            border: 1px solid #333;
-            display: block;
-            opacity: 0.85;
-            transition: opacity 0.3s;
+        
+        /* NEW GRID FOR 3 IMAGES */
+        .img-grid-3 {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 1.5rem;
+        }
+
+        .img-grid-4 img, .img-grid-3 img {
+            width: 100%; height: 200px; object-fit: cover;
+            border-radius: 4px; border: 1px solid #333;
+            display: block; opacity: 0.85; transition: opacity 0.3s;
         }
         .entry:hover img { opacity: 1; }
 
         .cad-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 1.5rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 1.5rem;
         }
         .cad-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            border: 1px solid #333;
-            opacity: 0.85;
+            width: 100%; height: auto; border-radius: 4px;
+            border: 1px solid #333; opacity: 0.85;
         }
 
-        p {
-            color: #ccc;
-            line-height: 1.8;
-        }
+        p { color: #ccc; line-height: 1.8; }
 
-        @media (max-width: 600px) {
-            .img-grid-4, .cad-grid { grid-template-columns: 1fr; }
+        @media (max-width: 768px) {
+            .img-grid-4, .img-grid-3, .cad-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -125,80 +98,70 @@
         <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 3rem; text-align: center;">STUDENT CLUBS</h1>
 
         <div class="club-section">
-            <div class="club-header">
-                <h2>Metropolitan Aerospace Rocket Society (MARS)</h2>
-            </div>
-
+            <div class="club-header"><h2>Metropolitan Aerospace Rocket Society (MARS)</h2></div>
             <div class="entry">
                 <h3>Mars Rocketry Club</h3>
-                
+                <span class="role-title">Member & Lead in Training</span>
                 <div class="img-grid-4">
                     <img src="studentclub3.jpg" alt="MARS Team Photo">
                     <img src="studentclub2.jpg" alt="Shiv with Rocket">
                     <img src="studentclub4.jpg" alt="Rocket on Table">
                     <img src="studentclub1.jpg" alt="Rocket Launch">
                 </div>
-
-                <p>As part of the Metropolitan Aerospace Rocket Society (MARS) for the term Fall 2024 and Winter 2025, I collaborated with a team to design, build, and launch a high-powered G-Class solid-fuel rocket from scratch. Our project included the full development cycle, from conceptual design to manufacturing and successful flight.</p>
+                <p>As part of the Metropolitan Aerospace Rocket Society (MARS) for the term Fall 2024 and Winter 2025, I collaborated with a team to design, build, and launch a high-powered G-Class solid-fuel rocket from scratch. Our project included the full development cycle—from conceptual design to manufacturing and successful flight.</p>
                 <br>
-                <p>We engineered a custom avionics bay equipped with a GPS tracking module and used OpenRocket and Onshape to model and simulate the rocket’s performance. Key components were 3D printed, allowing for iterative design and rapid prototyping.</p>
-                <br>
-                <p>This project deepened my understanding of propulsion, structural dynamics, and systems integration. Working alongside a multidisciplinary team, I gained hands-on experience in solving complex engineering problems while seeing our work culminate in a successful, data-logged launch.</p>
-                <br>
-                <p><em style="color: #ff0050;">Special thanks to my teammates Sakif Khandaker, Krish Patel, Clement Sayah and our mentors for their invaluable guidance.</em></p>
+                <p><strong>Leadership Development:</strong> During the Fall 2024 semester, I was selected as a <span style="color: #fff; font-weight: bold;">Lead in Training</span>. In this capacity, I shadowed the propulsion and aerostructures leads, gaining critical insight into project management, resource allocation, and team coordination.</p>
             </div>
-
             <div class="entry">
                 <h3>Avionics Bay Design</h3>
-
                 <div class="cad-grid">
                     <img src="studentclub6.jpg" alt="Avionics Bay CAD Cutaway">
                     <img src="studentclub5.jpg" alt="Avionics Bay CAD Tube">
                 </div>
-
-                <p>On participating in the MARS competition for the second time during the winter 2025 term, I took on the challenge of designing a fully functional avionics bay for the rocket. Using my 3-D modelling knowledge, I developed a compact yet innovative bay layout that integrated essential electronic components, including a GPS module, a battery, and the "Among-Us" flight computer board.</p>
-                <br>
-                <p>Beyond just housing these systems, the bay was engineered with practical safety considerations in mind: it featured a half-inch bulkhead to safeguard against ejection charges during launch and at apogee. This experience pushed me to expand my design thinking and 3D modeling skills while contributing a critical subsystem to the rocket's overall performance.</p>
+                <p>On participating in the MARS competition for the second time during the winter 2025 term, I took on the challenge of designing a fully functional avionics bay for the rocket using my 3-D modelling knowledge. It integrated essential electronic components including a GPS module, a battery, and the flight computer board.</p>
             </div>
         </div>
 
         <div class="club-section">
-            <div class="club-header">
-                <h2>Metropolitan Hyperloop</h2>
-            </div>
+            <div class="club-header"><h2>Canadian Aeronautics & Space Institute (CASI)</h2></div>
+            <div class="entry">
+                <h3>CASI TMU Branch</h3>
+                <span class="role-title">Industry Outreach Specialist</span>
+                
+                <div class="img-grid-3">
+                    <img src="CASI.1.jpg" alt="CASI Team Presentation">
+                    <img src="CASI.2.jpg" alt="Networking Event">
+                    <img src="CASI.3.jpg" alt="Industry Panel">
+                </div>
 
+                <p>As the Industry Outreach Specialist for the CASI TMU Branch, I serve as a bridge between the student body and the broader aerospace industry. My primary focus is to facilitate professional development opportunities for engineering students by connecting them with industry leaders and organizations.</p>
+                <br>
+                <p>My responsibilities include organizing networking events, securing guest speakers from top aerospace companies, and fostering partnerships that lead to mentorship and internship opportunities. This role has sharpened my communication skills and expanded my professional network within the Canadian aerospace sector.</p>
+            </div>
+        </div>
+
+        <div class="club-section">
+            <div class="club-header"><h2>Metropolitan Hyperloop</h2></div>
             <div class="entry">
                 <h3>Research & Development Specialist</h3>
                 <span class="role-title">Research & Development</span>
-                
                 <p>I recently joined the Metropolitan Hyperloop team to contribute to the future of high-speed transportation. My primary focus is conducting comprehensive feasibility studies for implementing Hyperloop infrastructure within Canada, analyzing geographic, economic, and regulatory factors.</p>
                 <br>
-                <p>Additionally, I am actively researching <strong>vacuum pump technology</strong> to optimize the depressurization systems required for the Hyperloop tube environment. This research involves evaluating different pump configurations to achieve and maintain the necessary low-pressure conditions for reduced air resistance and high-speed travel.</p>
+                <p>Additionally, I am actively researching <strong>vacuum pump technology</strong> to optimize the depressurization systems required for the Hyperloop tube environment.</p>
             </div>
         </div>
 
         <div class="club-section">
-            <div class="club-header">
-                <h2>Toronto Metropolitan Aero Design</h2>
-            </div>
-
+            <div class="club-header"><h2>Toronto Metropolitan Aero Design</h2></div>
             <div class="entry">
                 <h3>Aerostructures Member</h3>
                 <span class="role-title">Aerostructures Team</span>
-                
                 <p>As a member of the Aerostructures team, I am involved in the detailed design and fabrication of aircraft structural components. My role focuses on ensuring structural integrity while minimizing weight, utilizing composite materials and advanced manufacturing techniques.</p>
-                <br>
-                <p>I collaborate with the design team to model airframe structures and perform stress analysis, ensuring our aircraft meets the rigorous requirements for collegiate design competitions. This experience is further sharpening my skills in CAD, materials selection, and aerospace manufacturing processes.</p>
             </div>
         </div>
 
     </main>
 
-    <footer>
-        <p>&copy; Shiv Pinteshkumar Patel</p>
-    </footer>
+    <footer><p>&copy; 2024 Shiv Patel. Designed with Precision.</p></footer>
 </body>
 </html>
-
-
-

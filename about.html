@@ -3,91 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Shiv Patel</title>
+    <title>About - Shiv Patel</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Page-Specific Dark Styles for About Section */
         .about-container {
+            max-width: 1000px;
+            margin: 8rem auto 4rem auto;
+            padding: 0 20px;
+        }
+
+        .bio-section {
             display: flex;
-            align-items: center; /* Vertically center the content */
-            justify-content: space-between;
-            gap: 4rem; /* Space between image and text */
-            background-color: #111;
-            border: 1px solid #333;
-            padding: 3rem;
-            border-radius: 8px;
-            margin-bottom: 4rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 6rem;
         }
 
-        /* Image Styling */
-        .about-img-container {
-            flex: 1; /* Takes up 1 part of the space */
-            max-width: 400px; /* Prevents the image from getting too big */
-            border-radius: 8px;
-            overflow: hidden;
-            border: 3px solid #ff0050; /* Neon Red Border */
-            box-shadow: 0 0 20px rgba(255, 0, 80, 0.2);
-        }
-
-        .about-img-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        /* Subtle hover effect on image */
-        .about-img-container img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Text Content Styling */
-        .about-text {
-            flex: 2; /* Takes up 2 parts of the space */
-        }
-
-        .about-text h2 {
-            color: #fff;
+        .bio-text h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            color: #fff;
             margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #ff0050; /* Neon Red Underline */
-            display: inline-block;
-            padding-bottom: 0.5rem;
         }
 
-        .about-text p {
+        .bio-text p {
             color: #ccc;
             line-height: 1.8;
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
         }
 
-        .highlight-text {
-            color: #fff;
-            font-weight: bold;
+        .bio-img img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #ff0050;
+            box-shadow: 0 0 30px rgba(255, 0, 80, 0.3);
         }
 
-        /* Responsive Design for Smaller Screens */
-        @media (max-width: 768px) {
-            .about-container {
-                flex-direction: column; /* Stack image on top of text */
-                text-align: center;
-                gap: 2rem;
-                padding: 2rem;
-            }
+        /* --- EXPERIENCE SECTION --- */
+        .exp-section {
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-top: 4rem;
+        }
 
-            .about-img-container {
-                max-width: 100%; /* Image takes full width */
-            }
-            
-            .about-text h2 {
-                 display: block;
-                 border-bottom: none;
-                 margin-bottom: 1rem;
-            }
+        .exp-header {
+            border-bottom: 2px solid #00f2ea; /* Neon Cyan */
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .exp-header h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .job-title {
+            color: #ff0050;
+            font-size: 1.4rem;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-company {
+            color: #00f2ea;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .img-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .img-grid-3 img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+        
+        .img-grid-3 img:hover { transform: scale(1.02); opacity: 1; }
+
+        @media (max-width: 850px) {
+            .bio-section { flex-direction: column; text-align: center; }
+            .img-grid-3 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -107,27 +119,44 @@
         </div>
     </nav>
 
-    <main style="max-width: 1100px; margin: 8rem auto 4rem auto; padding: 0 20px;">
+    <div class="about-container">
         
-        <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 4rem; text-align: center; color: #fff;">ABOUT ME</h1>
-
-        <div class="about-container">
-            <div class="about-img-container">
-                <img src="About.jpg" alt="Shiv Patel">
+        <div class="bio-section">
+            <div class="bio-text">
+                <h1>About Me</h1>
+                <p>I am a 3rd Year Aerospace Engineering student at Toronto Metropolitan University, passionate about Aerodynamics, CAD Design, and Propulsion Systems. My journey in engineering is driven by a curiosity to understand how things fly and a desire to build the next generation of aerospace vehicles.</p>
+                <p>When I am not designing in CATIA or SolidWorks, I am actively involved in student leadership, mentoring first-year students, and connecting my peers with industry professionals through CASI.</p>
             </div>
-
-            <div class="about-text">
-                <h2>Hi, I'm Shiv Patel.</h2>
-                <p>I am a third-year <span class="highlight-text">Aerospace Engineering</span> student at Toronto Metropolitan University, driven by a passion for designing and building systems that push the boundaries of flight and exploration. My academic and project work focuses on <span class="highlight-text">aerodynamics, propulsion systems, and advanced CAD modeling</span>.</p>
-                <p>Beyond the classroom, I am an active member of the engineering community. From designing high-powered rockets with the <strong>Metropolitan Aerospace Rocket Society (MARS)</strong> to developing award-winning glider concepts and mentoring future engineers, I thrive in collaborative, problem-solving environments.</p>
-                <p>My goal is to leverage my technical skills and innovative mindset to contribute to the future of the aerospace industry, working on cutting-edge projects that make a real-world impact.</p>
+            <div class="bio-img">
+                <img src="HomePage.jpg" alt="Shiv Patel">
             </div>
         </div>
 
-    </main>
+        <div class="exp-section">
+            <div class="exp-header">
+                <h2>Professional Experience</h2>
+            </div>
+
+            <div class="job-entry">
+                <h3 class="job-title">Academic Link (Student Advisor)</h3>
+                <div class="job-company">TMU Residence | Faculty of Engineering & Architectural Sciences</div>
+
+                <div class="img-grid-3">
+                    <img src="AL.1.jpg" alt="Academic Link Portrait">
+                    <img src="AL.3.jpg" alt="Team Photo Outside">
+                    <img src="AL.2.jpg" alt="Team Presentation">
+                </div>
+
+                <p>I take pride in serving the TMU Residence community as the Student Advisor, representing the Faculty of Engineering and Architectural Sciences. In this role, I oversee over 200 students in their transition to first year and serve as the primary point of contact for their academic and personal inquiries.</p>
+                <br>
+                <p>I also take pride in being someone students can confidently approach for guidance, mentorship, and solutions. Through these experiences, I have improved my leadership, problem-solving, and communication skills by carefully assessing the needs of diverse students and providing thoughtful support that fosters both academic success and community well-being while managing my time across courses and extracurricular activities.</p>
+            </div>
+        </div>
+
+    </div>
 
     <footer>
-        <p>&copy; Shiv Pinteshkumar Patel</p>
+        <p>&copy; 2024 Shiv Patel. Designed with Precision.</p>
     </footer>
 </body>
 </html>

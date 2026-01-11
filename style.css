@@ -1,11 +1,11 @@
 /* --- GLOBAL RESET & VARIABLES --- */
 :root {
-    --primary-color: #ff0050; /* Neon Red */
+    --primary-color: #ff0050; /* Neon Red/Pink */
     --secondary-color: #00f2ea; /* Neon Cyan */
-    --bg-dark: #0a0a0a; /* Deep Black */
+    --bg-dark: #0a0a0a; /* Deep Black Background */
     --text-light: #ffffff;
     --text-grey: #b3b3b3;
-    --font-heading: 'Orbitron', sans-serif;
+    --font-heading: 'Orbitron', sans-serif; /* Sci-fi font */
     --font-body: 'Roboto', sans-serif;
 }
 
@@ -30,19 +30,64 @@ nav {
     background: rgba(10, 10, 10, 0.95);
     padding: 1rem 5%; position: fixed; width: 100%; top: 0; z-index: 1000;
     border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 4px 30px rgba(255, 0, 80, 0.2);
     backdrop-filter: blur(10px);
 }
+
 .nav-container {
     display: flex; justify-content: space-between; align-items: center;
     width: 100%; max-width: 1200px;
 }
-.logo { font-size: 1.8rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; }
-.logo span { color: var(--primary-color); text-shadow: 0 0 10px var(--primary-color); }
-.nav-links { display: flex; gap: 2rem; }
-.nav-links li a {
-    font-size: 1rem; font-weight: 500; transition: all 0.3s ease; position: relative;
+
+.logo { 
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    color: var(--text-light); 
+    text-transform: uppercase; 
 }
-.nav-links li a:hover { color: var(--primary-color); text-shadow: 0 0 5px var(--primary-color); }
+
+.logo span { 
+    color: var(--primary-color); 
+    text-shadow: 0 0 10px var(--primary-color); 
+}
+
+.nav-links { display: flex; gap: 2rem; }
+
+/* UPDATED NAV LINKS STYLE */
+.nav-links li a {
+    font-family: var(--font-heading); /* Orbitron Font */
+    font-size: 0.9rem; 
+    font-weight: 500; 
+    text-transform: uppercase; /* Makes it look techy */
+    letter-spacing: 1px;
+    color: var(--text-light);
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+/* Hover Effect: Neon Glow */
+.nav-links li a:hover { 
+    color: var(--primary-color); 
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+/* Underline Animation on Hover */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
 .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light); }
 
 /* --- HERO SECTION --- */
@@ -66,14 +111,14 @@ nav {
 .hero-content h3 { font-size: 1.5rem; font-weight: 300; color: var(--text-grey); margin-bottom: 1.5rem; }
 .hero-content p { font-size: 1.1rem; color: var(--text-grey); margin-bottom: 2.5rem; max-width: 500px; }
 
-/* CIRCULAR IMAGE STYLE RESTORED */
+/* CIRCULAR HERO IMAGE */
 .hero-image { flex: 0 0 auto; display: flex; justify-content: center; }
 
 .hero-image img {
     width: 350px;
     height: 350px;
-    object-fit: cover; /* Ensures image fills the circle */
-    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover; 
+    border-radius: 50%;
     border: 4px solid var(--primary-color);
     box-shadow: 0 0 40px rgba(255, 0, 80, 0.4), inset 0 0 20px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;

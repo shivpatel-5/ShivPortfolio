@@ -115,12 +115,67 @@
 
             <div class="img-grid-2">
                 <img src="A380-2.jpg" alt="A380 Front View">
-                <img src="A380.jpg" alt="A380 Rear View">
+                <img src="A380.jpg" alt="A380 Front View">
             </div>
 
             <p>To kickstart the Winter 2026 term, I challenged myself to model the massive <span class="highlight-text">Airbus A380</span> in SolidWorks within a single week. This project demanded a deep application of <strong>advanced assembly</strong> and <strong>3D sketching</strong>, followed by complex lofting techniques to capture the iconic aerodynamic profile of the superjumbo jet.</p>
+            <p>I utilized <strong>surface modeling</strong> to generate the complex curvature of the wings and vertical stabilizer, ensuring smooth continuity across the airframe.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h2>Walking Robot</h2>
+                <h3>Design and Simulation</h3>
+            </div>
+
+           <div class="single-img">
+                <img src="project1.jpg" alt="Walking Robot Project">
+            </div>
+
+            <p>This project showcases the design, development, and analysis of a 4-legged walking robot that utilizes a four-bar linkage mechanism (Crank - Rocker Mechanism). The robot is driven by a motor with a gear ratio of 126, and the maximum speed of the crank configuration was chosen for our particular robot design. The objective of this project was to manufacture/design a robot capable of walking efficiently while showcasing the stability of the mechanical linkages.</p>
             
-            <p>I utilized <strong>surface modeling</strong> to generate the complex curvature of the wings and vertical stabilizer, ensuring smooth continuity across the airframe. While this current iteration focuses on the primary structural geometry, I am actively developing the next phase, which will involve integrating the high-bypass turbofan engines and detailed landing gear assemblies to complete the digital twin.</p>
+            <p>The research phase of this project explored three distinct mechanical designs from which our group had to choose:</p>
+            <ul class="tech-list">
+                <li>A Double Crank-Rocker Mechanism</li>
+                <li>A Crank-slider Mechanism</li>
+                <li>A Crank-Rocker Mechanism</li>
+            </ul>
+
+            <p>The designs were analyzed and evaluated using MATLAB coding for their simulation and a weighted design matrix was developed for showcasing manufacturability, performance, and adaptability. Among all the configurations, <strong>The Double Crank-Rocker Mechanism</strong> showcased excellence in speed, simplicity, and minimal material usage, scoring the highest in the comparative design matrix.</p>
+
+            <p>The selected design features a six-bar linkage that is composed of two synchronized four-bar linkages, phased 180 degrees from each other enabling a crawling-like motion. The mechanical configuration ensured that one leg of the robot maintained contact with the ground during its motion, which promoted continuous stability. The system was analyzed by simulating the mechanism on MATLAB which gave us the displacement, velocity, and the angular velocity of the legs during the motion of cranking and rocking.</p>
+
+            <p>The links of the robot were 3-D modelled using <strong>CATIA V5</strong> which gave us visual information on the positions of the linkages and the distance between every part of the robot. Once the model was finalized it was laser cut onto an 8mm MDF (Medium-density fibreboard) sheet. The motor was encased in a casing that provided structural integrity giving it stability whilst minimizing the use of resources. The battery and the motor were friction fit in the casing, reducing the weight of the glue that would be used.</p>
+
+            <p>This project demonstrates how careful mechanism selection and its analytical modelling should be for creating a functional prototype that can lead to a functional robotic system capable of navigating terrain whilst maintaining its stability.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h2>Flight Simulator Configuration</h2>
+                <h3>Simulation & Control Systems</h3>
+            </div>
+
+            <div class="single-img">
+                <img src="project2.jpg" alt="Flight Simulator Setup">
+            </div>
+
+            <p>Developed a high-fidelity flight simulation setup to test aerodynamic principles in a virtual environment. This project focused on integrating hardware controls (yoke, throttle, pedals) with simulation software to replicate realistic flight dynamics.</p>
+            <p>This tool allows for the testing of aircraft stability and control response under various weather conditions and flight regimes.</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <h2>Industrial Gearbox Design</h2>
+                <h3>Mechanical Design & Stress Analysis</h3>
+            </div>
+
+            <div class="single-img">
+                <img src="project3.jpg" alt="Gearbox CAD Model">
+            </div>
+
+            <p>Engineered a multi-stage reduction gearbox designed to transmit high torque loads. The design process involved calculating <strong>gear ratios</strong>, analyzing contact stresses, and selecting appropriate materials (AISI 4340 Steel) to prevent failure.</p>
+            <p>Modeled in SolidWorks, the assembly features helical gears for noise reduction and smoother power transmission, complete with a full bill of materials and tolerance analysis.</p>
         </div>
 
         <div class="project-card">
@@ -134,7 +189,6 @@
             </div>
 
             <p>This project involved the detailed surface modeling of a DA50 RG aircraft using <span class="highlight-text">CATIA V5</span>. The focus was on aerodynamic accuracy and mastering the Generative Shape Design workbench.</p>
-            <p>Key challenges included creating smooth transitions between the fuselage and the wings, as well as modeling the intake manifolds to match real-world specifications. This model serves as a base for future CFD analysis.</p>
         </div>
 
         <div class="project-card">
@@ -148,7 +202,6 @@
             </div>
 
             <p>A hands-on engineering project focused on the internal structural integrity of an airfoil. We designed and assembled a wing skeleton to support composite skin application.</p>
-            <p>This project highlighted the importance of <span class="highlight-text">Rib and Spar placement</span> for load distribution. We utilized balsa and plywood for the frame, ensuring it remained lightweight while providing the necessary rigidity for the carbon fiber skinning process.</p>
         </div>
 
     </main>

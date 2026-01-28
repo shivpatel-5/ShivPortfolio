@@ -72,47 +72,54 @@
 
         .pdf-btn i { margin-right: 8px; }
 
-        /* --- IMAGE FIX --- */
-        .comp-img-container, .comp-grid {
-            width: 100%;
+        /* --- GALLERY GRID (Bento Style) --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            gap: 15px;
             margin-bottom: 2rem;
         }
 
-        /* SINGLE IMAGE */
-        .comp-img-container img {
+        /* Standard images in grid */
+        .gallery-grid img {
             width: 100%;
-            height: auto; 
-            display: block;
+            height: 300px; /* Fixed height for uniformity */
+            object-fit: cover; 
             border-radius: 4px;
             border: 1px solid #333;
             opacity: 0.9;
             transition: 0.3s;
         }
 
-        /* TWO IMAGES SIDE BY SIDE */
-        .comp-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+        /* Wide image spanning both columns (For CAD) */
+        .gallery-wide {
+            grid-column: span 2;
         }
         
-        .comp-grid img {
+        .gallery-wide img {
+            height: auto !important; /* Let height adjust naturally for CAD */
+            object-fit: contain;
+        }
+
+        .comp-entry:hover img { opacity: 1; transform: scale(1.005); }
+
+        /* Single Image Container (For other entries) */
+        .comp-img-container img {
             width: 100%;
-            height: auto; 
-            object-fit: contain; 
+            height: auto;
             border-radius: 4px;
             border: 1px solid #333;
             opacity: 0.9;
             transition: 0.3s;
+            margin-bottom: 2rem;
         }
-        
-        .comp-entry:hover img { opacity: 1; transform: scale(1.01); }
 
         p { color: #ccc; line-height: 1.8; margin-bottom: 1rem; }
         .highlight-text { color: #fff; font-weight: bold; }
 
         @media (max-width: 768px) {
-            .comp-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-wide { grid-column: span 1; }
             .comp-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
@@ -147,8 +154,11 @@
             <div class="comp-img-container">
                 <img src="Comp1.jpg" alt="Astralis Competition">
             </div>
-            <p>As part of a three-member team, I competed in the <span class="highlight-text">Astralis: Future of Robotics</span> competition, developing a mitigation strategy for space debris accumulation in LEO and GEO orbits.</p>
-            <p>Our concept deployed a network of <strong>orbit-based sensor modules</strong> to create a real-time data-sharing infrastructure. We pitched our solution to judges from <strong>MDA Space, Rocket Lab, and NordSpace</strong>.</p>
+            
+            <p>As part of a three-member team, I competed in the <span class="highlight-text">Astralis: Future of Robotics</span> competition, hosted by CASI TMU, where we were tasked with addressing the increasingly urgent issue of <strong>space debris accumulation</strong> in orbits such as LEO (Low Earth Orbit) and GEO (Geostationary Orbit).</p>
+            <p>Given just 12 hours, our challenge was to develop a comprehensive mitigation strategy following a hypothetical debris-generating collision in GEO. Our proposed solution focused on immediate risk reduction, advanced debris tracking and avoidance, and a sustainable legal and policy framework.</p>
+            <p>Our concept involved deploying a network of <strong>orbit-based sensor modules</strong> to create a real-time data-sharing infrastructure capable of continuously monitoring the position and velocity of debris. This data would be integrated into a centralized platform to support autonomous collision avoidance systems and long-term orbital traffic management.</p>
+            <p>My teammates, <strong>Mahishan Raveendran and Ved Patel</strong>, and I worked collaboratively under tight time constraints to conduct technical research, synthesize legal-policy frameworks, and deliver a high-impact presentation. We pitched our solution to industry professionals and judges from organizations such as <strong>MDA Space, Rocket Lab, and NordSpace</strong>. This experience pushed the boundaries of our problem-solving, rapid prototyping, and teamwork skills.</p>
         </div>
 
         <div class="comp-entry">
@@ -161,8 +171,11 @@
             <div class="comp-img-container">
                 <img src="Comp2.jpg" alt="Galforce Glider">
             </div>
-            <p>We secured <span class="highlight-text">1st Place</span> for our innovative long-endurance glider design, <em>Galforce</em>. The challenge required conceptualizing a propulsion-free, 3-meter wingspan glider using CATIA V5.</p>
-            <p>I led the design of the <strong>fuselage and modular payload bay</strong>, utilizing carbon-fiber-reinforced composites to minimize weight while maintaining structural integrity.</p>
+            
+            <p>As part of a three-member team, I competed in the <span class="highlight-text">CATIA C3 2025 Aerospace Design Competition</span> hosted by the Toronto Metropolitan Aerospace Course Union (ACU), where we secured <span class="highlight-text">1st Place in the Senior Category</span> for our innovative long-endurance glider design, <em>Galforce</em>. The challenge required participants to conceptualize and model a propulsion-free, 3-meter wingspan glider within an 8-hour time limit using CATIA V5, targeting applications in atmospheric and climate research.</p>
+            <p>Our objective was to create a robust, modular glider capable of sustaining flight in extreme environments while optimizing aerodynamic efficiency and payload adaptability. I led the design of the <strong>fuselage and modular payload bay</strong>, selecting carbon-fiber-reinforced composites to minimize weight while protecting scientific instruments.</p>
+            <p>My teammates, <strong>Arshan Thuraiappah and Sakif Khandaker</strong>, contributed by engineering high-aspect-ratio wings for lift optimization and a stabilized tail assembly with integrated landing gear for diverse launch conditions.</p>
+            <p>This project challenged us to balance structural integrity, aerodynamic performance, and real-world mission adaptability under time constraints. The collaborative design process, rapid iteration in CATIA, and systems-level thinking made this a defining experience in aircraft conceptual design.</p>
         </div>
 
         <div class="comp-entry">
@@ -176,25 +189,25 @@
                 </a>
             </div>
 
-            <div class="comp-grid" style="margin-bottom: 15px;">
+            <div class="gallery-grid">
                 <img src="Glider4.jpg" alt="Glider Team">
-                <img src="Glider1.jpg" alt="Shiv with Glider">
-            </div>
-            
-            <div class="comp-grid" style="margin-bottom: 15px;">
-                 <img src="Glider3.jpg" alt="Glider Construction">
-                 <img src="Glider2.jpg" alt="Glider Launch">
-            </div>
-
-            <div class="comp-img-container">
-                <img src="Glider5.jpg" alt="Glider Wing CAD Analysis">
+                <img src="Glider1.jpg" alt="Shiv with Glider" style="object-position: top;">
+                
+                <img src="Glider3.jpg" alt="Glider Construction">
+                <img src="Glider2.jpg" alt="Glider Launch">
+                
+                <div class="gallery-wide">
+                    <img src="Glider5.jpg" alt="Glider Wing CAD Analysis">
+                </div>
             </div>
 
-            <p>The goal of this project was to design and construct a glider aircraft capable of flying the furthest possible distance while weighing the least. We utilized the <strong>NACA M22 airfoil</strong> and manufactured the wing using composite materials to optimize lift and durability.</p>
+            <p>The goal of this project was to design and construct a glider aircraft that is capable of flying the furthest possible distance while weighing the least amount possible. The materials were provided in advance during lab sessions, along with the mould for the <strong>NACA M22 airfoil</strong> that was used to manufacture the actual wing.</p>
             
-            <p>Several requirements had to be met: the final design length had to be under 29.5 inches, fuselage width under 2 inches, and tail fin area less than 30% of the wing area. All non-wing components were designed in CAD and manufactured using <strong>laser cutting and 3D printing</strong> to optimize weight and durability.</p>
+            <p>All of the components other than the wing were designed using a CAD program and manufactured using processes such as <strong>laser cutting and 3D printing</strong>. Materials were chosen to optimize both weight and durability of the design.</p>
             
-            <p>The competition scored designs based on glide distance divided by final weight. Our final glider successfully survived all three flight attempts, demonstrating the effectiveness of our manufacturing process. The final design balanced structural integrity with aerodynamic efficiency.</p>
+            <p>Several requirements had to be met: the final design length had to be under 29.5 inches, fuselage width under 2 inches, and tail fin area less than 30% of the wing area.</p>
+            
+            <p>The competition scored designs based on the glide distance divided by the final weight. Our final glider successfully survived all three flight attempts, demonstrating the effectiveness of our manufacturing process. The final design balanced structural integrity with aerodynamic efficiency.</p>
         </div>
 
     </main>
@@ -202,5 +215,5 @@
     <footer>
         <p>&copy; Shiv Pinteshkumar Patel</p>
     </footer>
-    </body>
+</body>
 </html>

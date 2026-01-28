@@ -44,30 +44,30 @@
             letter-spacing: 2px;
         }
 
-        /* Image Grid for FUTUR ENG */
-        .img-grid-3 {
+        /* --- NEAT GRID STYLES --- */
+        .gallery-grid-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             margin-bottom: 2rem;
         }
 
-        .img-grid-3 img {
+        .gallery-grid-3 img {
             width: 100%;
-            height: auto;
-            object-fit: contain;
+            height: 300px; /* Uniform height */
+            object-fit: cover;
             border-radius: 4px;
             border: 1px solid #333;
             opacity: 0.9;
             transition: 0.3s;
         }
 
-        .vol-entry:hover img { opacity: 1; transform: scale(1.01); }
+        .vol-entry:hover img { opacity: 1; transform: scale(1.005); }
 
         p { color: #ccc; line-height: 1.8; margin-bottom: 1rem; }
         
         @media (max-width: 768px) {
-            .img-grid-3 { grid-template-columns: 1fr; }
+            .gallery-grid-3 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -97,13 +97,14 @@
                 <h3>FEAS Outreach | FuturENG Mentor</h3>
             </div>
 
-            <div class="img-grid-3">
-                <img src="volunteer1.jpg">
-                <img src="volunteer2.jpg">
-                <img src="volunteer3.jpg">
+            <div class="gallery-grid-3">
+                <img src="volunteer 1 .jpg" alt="FuturENG Event 1">
+                <img src="volunteer2.jpg" alt="FuturENG Event 2">
+                <img src="volunteer3.jpg" alt="FuturENG Event 3">
             </div>
-            <p>On November 16th, FEAS Outreach hosted the 2024 <strong>"FuturENG"</strong> event for women in stem in grades 9-12, supported by HydroOne through the WEMADEIT program. As a mentor, I guided highly motivated female students as they explored the world of engineering through hands-on workshops.</p>
-            <p>I mentored students in crafting and designing <strong>electric vehicles</strong> using materials produced in our cutting-edge labs, helping them navigate challenges that arose during manufacturing and design. By sharing my own experiences and connecting with them on a personal level, I aimed to spark a passion for STEM and give them real insights into life as an engineering student.</p>
+
+            <p>On November 16th, FEAS Outreach hosted the 2024 <strong>"FuturENG"</strong> event for women in STEM in grades 9-12, supported by HydroOne through the WEMADEIT program. As a mentor, I guided highly motivated female students as they explored the world of engineering through hands-on workshops.</p>
+            <p>I mentored students in crafting and designing <strong>electric vehicles</strong> using materials produced in our cutting-edge labs, helping them navigate challenges that arose during manufacturing and design.</p>
         </div>
 
         <div class="vol-entry">
@@ -122,8 +123,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-

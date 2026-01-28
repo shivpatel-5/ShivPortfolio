@@ -39,17 +39,17 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Image Grids */
-        .img-grid-2 {
+        /* --- NEAT GRID STYLES --- */
+        .gallery-grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin-bottom: 2rem;
         }
 
-        .img-grid-2 img {
+        .gallery-grid-2 img {
             width: 100%;
-            height: 300px;
+            height: 300px; /* Uniform height for cleanliness */
             object-fit: cover;
             border-radius: 4px;
             border: 1px solid #333;
@@ -61,6 +61,8 @@
         .single-img img {
              width: 100%;
              height: auto;
+             max-height: 500px; /* Prevents single images from getting too huge */
+             object-fit: cover;
              border-radius: 4px;
              border: 1px solid #333;
              margin-bottom: 2rem;
@@ -68,22 +70,23 @@
 
         .project-card:hover img {
             opacity: 1;
-            transform: scale(1.01);
+            transform: scale(1.005);
         }
 
-        p {
+        p { color: #ccc; line-height: 1.8; margin-bottom: 1rem; }
+        .highlight-text { color: #fff; font-weight: bold; }
+        
+        /* List Styles */
+        ul.tech-list {
+            list-style: disc inside;
             color: #ccc;
-            line-height: 1.8;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
         }
-
-        .highlight-text {
-            color: #fff;
-            font-weight: bold;
-        }
+        ul.tech-list li { margin-bottom: 0.5rem; }
 
         @media (max-width: 768px) {
-            .img-grid-2 { grid-template-columns: 1fr; }
+            .gallery-grid-2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -113,9 +116,9 @@
                 <h3>SolidWorks Surface Design & Assembly</h3>
             </div>
 
-            <div class="img-grid-2">
+            <div class="gallery-grid-2">
                 <img src="A380-2.jpg" alt="A380 Front View">
-                <img src="A380.jpg" alt="A380 Front View">
+                <img src="A380.jpg" alt="A380 Rear View">
             </div>
 
             <p>To kickstart the Winter 2026 term, I challenged myself to model the massive <span class="highlight-text">Airbus A380</span> in SolidWorks within a single week. This project demanded a deep application of <strong>advanced assembly</strong> and <strong>3D sketching</strong>, followed by complex lofting techniques to capture the iconic aerodynamic profile of the superjumbo jet.</p>
@@ -125,29 +128,25 @@
         <div class="project-card">
             <div class="project-header">
                 <h2>Walking Robot</h2>
-                <h3>Design and Simulation</h3>
+                <h3>Mechatronics & Kinematics</h3>
             </div>
 
-           <div class="single-img">
-                <img src="project3.jpg" alt="Walking Robot Project">
+            <div class="single-img">
+                <img src="walkingrobot.jpg" alt="Walking Robot Project">
             </div>
 
-            <p>This project showcases the design, development, and analysis of a 4-legged walking robot that utilizes a four-bar linkage mechanism (Crank - Rocker Mechanism). The robot is driven by a motor with a gear ratio of 126, and the maximum speed of the crank configuration was chosen for our particular robot design. The objective of this project was to manufacture/design a robot capable of walking efficiently while showcasing the stability of the mechanical linkages.</p>
+            <p>This report showcases the design, development, and analysis of a 4-legged walking robot that utilizes a four-bar linkage mechanism (Crank - Rocker Mechanism). The robot is driven by a motor with a gear ratio of 126. The objective was to manufacture a robot capable of walking efficiently while showcasing mechanical stability.</p>
             
-            <p>The research phase of this project explored three distinct mechanical designs from which our group had to choose:</p>
+            <p>The research phase explored three distinct mechanical designs:</p>
             <ul class="tech-list">
                 <li>A Double Crank-Rocker Mechanism</li>
                 <li>A Crank-slider Mechanism</li>
                 <li>A Crank-Rocker Mechanism</li>
             </ul>
 
-            <p>The designs were analyzed and evaluated using MATLAB coding for their simulation and a weighted design matrix was developed for showcasing manufacturability, performance, and adaptability. Among all the configurations, <strong>The Double Crank-Rocker Mechanism</strong> showcased excellence in speed, simplicity, and minimal material usage, scoring the highest in the comparative design matrix.</p>
+            <p>Among all the configurations, <strong>The Double Crank-Rocker Mechanism</strong> showcased excellence in speed, simplicity, and minimal material usage, scoring the highest in the comparative design matrix.</p>
 
-            <p>The selected design features a six-bar linkage that is composed of two synchronized four-bar linkages, phased 180 degrees from each other enabling a crawling-like motion. The mechanical configuration ensured that one leg of the robot maintained contact with the ground during its motion, which promoted continuous stability. The system was analyzed by simulating the mechanism on MATLAB which gave us the displacement, velocity, and the angular velocity of the legs during the motion of cranking and rocking.</p>
-
-            <p>The links of the robot were 3-D modelled using <strong>CATIA V5</strong> which gave us visual information on the positions of the linkages and the distance between every part of the robot. Once the model was finalized it was laser cut onto an 8mm MDF (Medium-density fibreboard) sheet. The motor was encased in a casing that provided structural integrity giving it stability whilst minimizing the use of resources. The battery and the motor were friction fit in the casing, reducing the weight of the glue that would be used.</p>
-
-            <p>This project demonstrates how careful mechanism selection and its analytical modelling should be for creating a functional prototype that can lead to a functional robotic system capable of navigating terrain whilst maintaining its stability.</p>
+            <p>The selected design features a six-bar linkage comprised of two synchronized four-bar linkages, phased 180 degrees from each other. The links were modeled using <strong>CATIA V5</strong> and laser cut onto an 8mm MDF sheet.</p>
         </div>
 
         <div class="project-card">
@@ -157,11 +156,10 @@
             </div>
 
             <div class="single-img">
-                <img src="project4.jpg" alt="Flight Simulator Setup">
+                <img src="flightsim.jpg" alt="Flight Simulator Setup">
             </div>
 
             <p>Developed a high-fidelity flight simulation setup to test aerodynamic principles in a virtual environment. This project focused on integrating hardware controls (yoke, throttle, pedals) with simulation software to replicate realistic flight dynamics.</p>
-            <p>This tool allows for the testing of aircraft stability and control response under various weather conditions and flight regimes.</p>
         </div>
 
         <div class="project-card">
@@ -171,11 +169,10 @@
             </div>
 
             <div class="single-img">
-                <img src="project5.jpg" alt="Gearbox CAD Model">
+                <img src="gearbox.jpg" alt="Gearbox CAD Model">
             </div>
 
             <p>Engineered a multi-stage reduction gearbox designed to transmit high torque loads. The design process involved calculating <strong>gear ratios</strong>, analyzing contact stresses, and selecting appropriate materials (AISI 4340 Steel) to prevent failure.</p>
-            <p>Modeled in SolidWorks, the assembly features helical gears for noise reduction and smoother power transmission, complete with a full bill of materials and tolerance analysis.</p>
         </div>
 
         <div class="project-card">
@@ -207,10 +204,7 @@
     </main>
 
     <footer>
-        <p>&copy; Shiv Pinteshkumar Patel</p>
+        <p>&copy;Shiv Pinteshkumar Patel</p>
     </footer>
 </body>
 </html>
-
-
-

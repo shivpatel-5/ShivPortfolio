@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
 /* --- GLOBAL RESET & VARIABLES --- */
 :root {
     --primary-color: #ff0050; /* Neon Red/Pink */
@@ -52,6 +54,7 @@ nav {
 }
 
 .nav-links { display: flex; gap: 2rem; }
+.nav-links.nav-active { display: flex; }
 
 /* UPDATED NAV LINKS STYLE */
 .nav-links li a {
@@ -88,7 +91,32 @@ nav {
     width: 100%;
 }
 
-.hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light); }
+.hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-light);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.toggle span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.hamburger.toggle span:nth-child(2) { opacity: 0; }
+.hamburger.toggle span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
 /* --- HERO SECTION --- */
 .hero {
@@ -189,10 +217,30 @@ footer p { color: var(--text-grey); font-size: 0.9rem; margin-top: 1rem; }
     .hero-image img { width: 280px; height: 280px; }
 }
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hamburger { display: block; }
+    nav { padding: 0.8rem 1.5rem; }
+    .nav-container { position: relative; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.98);
+        padding: 1.5rem;
+        border: 1px solid #222;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+    }
+    .nav-links.nav-active { display: flex; }
+    .nav-links li { padding: 0.5rem 0; }
+    .hamburger { display: flex; }
     .hero { height: auto; padding: 100px 5% 4rem 5%; text-align: center; }
     .hero-container { flex-direction: column-reverse; gap: 2rem; }
     .hero-image img { width: 250px; height: 250px; }
     .btn { display: block; width: 100%; margin: 0.5rem 0; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+    .tilt-card { transform: none !important; }
 }

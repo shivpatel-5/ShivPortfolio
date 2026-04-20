@@ -4,10 +4,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    if (hamburger) {
+    if (hamburger && navLinks) {
+        const setExpanded = (isOpen) => {
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        };
+
         hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
+            const isOpen = navLinks.classList.toggle('nav-active');
             hamburger.classList.toggle('toggle');
+            setExpanded(isOpen);
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                hamburger.classList.remove('toggle');
+                setExpanded(false);
+            });
         });
     }
 

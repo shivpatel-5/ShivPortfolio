@@ -152,8 +152,13 @@ nav.scrolled {
 .exp-entry {
     border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,.015);
     padding: 34px 38px;
+    display: grid; grid-template-columns: 1.4fr .85fr; gap: 44px; align-items: start;
 }
 .exp-entry .feat-kicker { margin-bottom: 12px; }
+.exp-media { margin: 0; }
+.exp-media img { width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid var(--line); background: #05070d; }
+.exp-media figcaption { margin-top: 12px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); line-height: 1.6; }
+@media (max-width: 768px) { .exp-entry { grid-template-columns: 1fr; gap: 26px; padding: 26px 22px; } }
 .job-meta { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--muted); margin-top: 8px; }
 .exp-bullets { margin-top: 24px; list-style: none; display: grid; gap: 15px; }
 .exp-bullets li { position: relative; padding-left: 26px; font-size: 15.5px; line-height: 1.7; color: var(--body); font-weight: 300; }

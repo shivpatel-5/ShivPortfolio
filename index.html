@@ -3,51 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiv Patel - Aerospace Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Shiv Patel · Aerospace Engineering Portfolio</title>
+    <meta name="description" content="Shiv Patel, a 3rd-year Aerospace Engineering student at Toronto Metropolitan University. Aerodynamics, CAD design and manufacturing, from RC planes to rockets.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
+    <!-- ============ NAV ============ -->
     <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Shiv <span>Patel</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="competitions.html">Competitions</a></li>
-                <li><a href="student-clubs.html">Clubs</a></li>
-                <li><a href="volunteering.html">Volunteering</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
+        <a href="#hero" class="nav-logo"><span class="nav-dot"></span> SHIV&nbsp;PATEL</a>
+        <ul class="nav-links">
+            <li><a href="#experience" data-nav="experience">Experience</a></li>
+            <li><a href="#work" data-nav="work">Work</a></li>
+            <li><a href="#competitions" data-nav="competitions">Competitions</a></li>
+            <li><a href="#clubs" data-nav="clubs">Clubs</a></li>
+            <li><a href="#community" data-nav="community">Community</a></li>
+            <li><a href="#volunteering" data-nav="volunteering">Volunteering</a></li>
+            <li><a href="#about" data-nav="about">About</a></li>
+            <li><a href="ShivPatel_Resume.pdf" target="_blank" class="nav-cta">Résumé ↗</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </nav>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Hi, I am <span class="highlight">Shiv Patel</span></h1>
-                <h2>3rd Year Aerospace Engineering Student - Aircraft Stream</h2>
-                <h3>Toronto Metropolitan University</h3>
-                <p>Passionate about Aerodynamics, 3D Modeling and Manufacturing (RC Planes, Rockets etc).</p>
-                
-                <div style="margin-top: 2.5rem; display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-                    <a href="projects.html" class="btn btn-primary"><i class="fas fa-rocket" style="margin-right: 8px;"></i> VIEW MY WORK</a>
-                    <a href="about.html" class="btn btn-secondary">ABOUT ME</a>
-                    <a href="ShivPatel_Resume.pdf" target="_blank" class="btn btn-secondary"><i class="fas fa-file-pdf" style="margin-right: 8px;"></i> RESUME</a>
-                </div>
+    <!-- ============ HERO ============ -->
+    <header id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-fade-v"></div>
+        <div class="hero-fade-h"></div>
+        <div class="grid-overlay"></div>
 
+        <div class="hero-inner">
+            <div class="eyebrow" data-reveal><span></span> Aerospace Engineering · Aircraft Stream</div>
+            <h1 data-reveal>Designing things<br>that <span class="accent">fly.</span></h1>
+            <p class="hero-p" data-reveal>I'm <strong>Shiv Patel</strong>, a 3rd-year Aerospace Engineering student at Toronto Metropolitan University, passionate about aerodynamics, 3D modeling and manufacturing (RC planes, rockets and more).</p>
+            <div class="btn-row" data-reveal>
+                <a href="#work" class="btn btn-primary">VIEW MY WORK →</a>
+                <a href="#about" class="btn btn-ghost">ABOUT ME</a>
             </div>
-            <div class="hero-image">
-                <img src="HomePage.jpg" alt="Shiv Patel">
+        </div>
+
+        <div class="hero-coords">43.6582°N · 79.3787°W<br>Toronto, ON</div>
+    </header>
+
+    <!-- ============ TOOLS TICKER ============ -->
+    <section class="ticker" aria-label="Tools and software">
+        <div class="ticker-track">
+            <!-- set 1 -->
+            <span class="ticker-item"><i class="fas fa-cube"></i> CATIA V5</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-drafting-compass"></i> SolidWorks</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-square-root-variable"></i> MATLAB / Simulink</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-wind"></i> ANSYS CFD</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-plane-up"></i> Aerodynamics</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-industry"></i> Laser Cutting</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-print"></i> 3D Printing</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-layer-group"></i> Composite Layup</span><span class="ticker-item dot">/</span>
+            <!-- set 2 (duplicate for seamless loop) -->
+            <span class="ticker-item"><i class="fas fa-cube"></i> CATIA V5</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-drafting-compass"></i> SolidWorks</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-square-root-variable"></i> MATLAB / Simulink</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-wind"></i> ANSYS CFD</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-plane-up"></i> Aerodynamics</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-industry"></i> Laser Cutting</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-print"></i> 3D Printing</span><span class="ticker-item dot">/</span>
+            <span class="ticker-item"><i class="fas fa-layer-group"></i> Composite Layup</span><span class="ticker-item dot">/</span>
+        </div>
+    </section>
+
+    <!-- ============ AT A GLANCE ============ -->
+    <section id="snapshot" class="section snapshot">
+        <div class="sec-index" data-reveal>Currently</div>
+        <div class="snap-grid">
+            <div class="snap-row" data-reveal>
+                <div class="snap-label">Current Roles</div>
+                <div class="snap-value"><strong>Mechanical &amp; Equipment Technician (Co-op)</strong> at Athletic Knit, and <strong>Student Advisor (Academic Link)</strong> at TMU Residence, supporting 200+ first-year students.</div>
+            </div>
+            <div class="snap-row" data-reveal>
+                <div class="snap-label">What I'm Doing</div>
+                <div class="snap-value">On the <strong>Metropolitan Hyperloop Structures</strong> sub-team, designing and running static FEA on the pod's track and chassis frames.</div>
+            </div>
+            <div class="snap-row" data-reveal>
+                <div class="snap-label">Student Teams</div>
+                <div class="snap-value"><strong>Metropolitan Hyperloop</strong>, <strong>MARS</strong> (rocketry &amp; avionics), <strong>TMAD</strong> (aero design) and <strong>CASI</strong> (industry outreach).</div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; Shiv Pinteshkumar Patel</p>
+    <!-- ============ FEATURED ============ -->
+    <section id="featured" class="section">
+        <div class="section-head" data-reveal>
+            <div>
+                <div class="sec-index">★ / Featured</div>
+                <h2 class="sec-title">Featured Highlights</h2>
+            </div>
+            <p>A hand-picked look at the work I'm most proud of, growing as I build more.</p>
+        </div>
+
+        <div class="featured-grid">
+            <!-- Featured 1: Hyperloop Structures (current sub-team) -->
+            <a class="feat-card" href="#hyperloop-structures" data-reveal>
+                <div class="feat-card-img"><img src="Track1.jpg" alt="Hyperloop track and chassis structures"></div>
+                <div class="feat-card-body">
+                    <div class="feat-card-tag">Metropolitan Hyperloop · Structures</div>
+                    <h3>Track &amp; Chassis Structures</h3>
+                    <p>On the Hyperloop Structures sub-team, designing and analyzing the track and chassis frames.</p>
+                    <span class="feat-card-go">Explore →</span>
+                </div>
+            </a>
+
+            <!-- Featured 2: MARS -->
+            <a class="feat-card" href="#org-mars" data-reveal>
+                <div class="feat-card-img"><img src="studentclub3.jpg" alt="MARS rocketry team with rocket" style="object-position:center 30%"></div>
+                <div class="feat-card-body">
+                    <div class="feat-card-tag">M.A.R.S · Rocketry</div>
+                    <h3>G-Class Rocket &amp; Avionics Bay</h3>
+                    <p>Designed, built and launched a solid-fuel rocket from scratch, and modeled its avionics bay as Lead in Training.</p>
+                    <span class="feat-card-go">Explore →</span>
+                </div>
+            </a>
+
+            <!-- To feature more later, copy a block above and point href to the section id (e.g. #competitions, #work). -->
+        </div>
+    </section>
+
+    <!-- ============ PROFESSIONAL EXPERIENCE (co-op) ============ -->
+    <section id="experience" class="section">
+        <div class="section-head" data-reveal>
+            <div>
+                <div class="sec-index">01 / Experience</div>
+                <h2 class="sec-title">Professional Experience</h2>
+            </div>
+            <p>Industry co-op applying mechanical, automation and manufacturing engineering on the production floor.</p>
+        </div>
+
+        <div class="exp-entry" data-reveal>
+            <div class="feat-kicker">ATHLETIC KNIT · CO-OP · TORONTO, ON · ON-SITE</div>
+            <h3 class="feat-title">Mechanical &amp; Equipment Technician</h3>
+            <div class="job-meta">May 2026 to Present</div>
+            <ul class="exp-bullets">
+                <li>Performed preventive and corrective maintenance on semi-autonomous production equipment, diagnosing mechanical and electrical faults to keep lines running.</li>
+                <li>Built a Python and VBA desktop tool driving CorelDRAW through its COM interface to batch-generate jersey numbering and lettering, replacing a manual layout step and improving production rate by <strong>65%</strong>.</li>
+                <li>Reduced laser-cut cycle time by <strong>50%</strong> through nesting and toolpath changes, and cut material consumption by <strong>4%</strong>.</li>
+                <li>Authored process documentation and standard operating procedures so machine setup and tooling changes could be repeated by any operator.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section">
+        <div class="section-head" data-reveal>
+            <div>
+                <div class="sec-index">02 / Selected Work</div>
+                <h2 class="sec-title">Engineering Projects</h2>
+            </div>
+            <p>CAD modeling, simulation and mechanical design across SolidWorks, CATIA V5 and MATLAB / Simulink.</p>
+        </div>
+
+        <div class="work-list">
+
+            <article class="project wide" data-reveal>
+                <div class="project-media"><img src="project5.jpg" alt="Industrial gearbox CAD model"></div>
+                <div class="project-body">
+                    <div class="proj-index">PROJECT 01 · MECHANICAL DESIGN</div>
+                    <h3 class="proj-title">Industrial Gearbox</h3>
+                    <div class="proj-sub">Design &amp; Stress Analysis</div>
+                    <p class="proj-desc">Reverse-engineered and improved a gearbox for the robot-combat community, maintaining the same gear ratio and compatibility with the existing components while improving load capacity, thermal performance, noise, vibration and cost. I took the role of designing the gearbox parts to match the constraints of the real assembly, and helped develop the new design with the team.</p>
+                    <div class="pills"><span class="pill">Reverse Engineering</span><span class="pill">Stress Analysis</span><span class="pill">DFM</span></div>
+                </div>
+            </article>
+
+            <article class="project reverse" data-reveal>
+                <div class="project-media"><img src="project1.jpg" alt="DA50 RG aircraft CAD model"></div>
+                <div class="project-body">
+                    <div class="proj-index">PROJECT 02 · CATIA V5</div>
+                    <h3 class="proj-title">DA50 RG Aircraft</h3>
+                    <div class="proj-sub">Surface Modeling</div>
+                    <p class="proj-desc">A self-directed 3-D model of the DA 50 RG built with accurate dimensions, including a 38.3-foot wingspan and 29-foot fuselage length. The model captures the aircraft's sleek carbon-fiber airframe and its unique wing and stabilizer design, and deepened my proficiency with CATIA V5 and aircraft design.</p>
+                    <div class="pills"><span class="pill">Aerodynamics</span><span class="pill">3-D Modeling</span></div>
+                </div>
+            </article>
+
+            <article class="project" data-reveal>
+                <div class="project-media"><img src="project3.jpg" alt="4-legged walking robot"></div>
+                <div class="project-body">
+                    <div class="proj-index">PROJECT 03 · MATLAB · CATIA</div>
+                    <h3 class="proj-title">4-Legged Walking Robot</h3>
+                    <div class="proj-sub">Design &amp; Simulation</div>
+                    <p class="proj-desc">A four-legged walking robot driven by a double crank-rocker (six-bar) linkage at a 126 gear ratio. Three candidate mechanisms were evaluated with a weighted design matrix; the selected design was simulated in MATLAB for displacement, velocity and angular velocity, modeled in CATIA V5, then laser-cut from an 8 mm MDF sheet for a continuous, stable crawling motion.</p>
+                    <div class="pills"><span class="pill">Linkage Design</span><span class="pill">Simulation</span><span class="pill">Manufacturing</span></div>
+                </div>
+            </article>
+
+            <article class="project reverse" data-reveal>
+                <div class="project-media"><img src="project4.jpg" alt="Flight simulator setup"></div>
+                <div class="project-body">
+                    <div class="proj-index">PROJECT 04 · MATLAB · SIMULINK</div>
+                    <h3 class="proj-title">Flight Simulator Engine</h3>
+                    <div class="proj-sub">Simulation &amp; Control Systems</div>
+                    <p class="proj-desc">A high-fidelity physics engine for a narrow-body twinjet airliner designed to compete with the Boeing 737 and Airbus A320. Built in MATLAB and Simulink to model six degrees-of-freedom (6-DOF) motion, aerodynamic forces and geodetic navigation, outputting Euler angles, body rates and GPS coordinates. Results were visualized in FlightGear and controlled through a joystick interface.</p>
+                    <div class="pills"><span class="pill">6-DOF Dynamics</span><span class="pill">Simulink</span><span class="pill">FlightGear</span></div>
+                </div>
+            </article>
+
+            <article class="project" data-reveal>
+                <div class="project-media"><img src="A380-2.jpg" alt="Airbus A380 CAD model"></div>
+                <div class="project-body">
+                    <div class="proj-index">PROJECT 05 · SOLIDWORKS</div>
+                    <h3 class="proj-title">Airbus A380 CAD Model</h3>
+                    <div class="proj-sub">Surface Design &amp; Assembly</div>
+                    <p class="proj-desc">Modeled the Airbus A380 in SolidWorks with advanced assembly and 3-D sketching, followed by lofting the different parts of the aircraft. Used surface modeling to build the wings and tail in full 3-D, with plans to add the engines and further detail in future iterations.</p>
+                    <div class="pills"><span class="pill">Surface Modeling</span><span class="pill">Lofting</span><span class="pill">Assembly</span></div>
+                </div>
+            </article>
+
+            <article class="project wide" data-reveal>
+                <div class="project-media"><img src="project2.jpg" alt="Composite wing structure"></div>
+                <div class="project-body">
+                    <div class="proj-index">PROJECT 06 · CATIA V5 · RC3 COMP</div>
+                    <h3 class="proj-title">Composite Wing Structure</h3>
+                    <div class="proj-sub">Materials &amp; Manufacturing</div>
+                    <p class="proj-desc">The aircraft wing for the RC3 Competition, 3-D modeled in CATIA V5 with an aspect ratio of 6 and a NACA 2412 airfoil for a high-lift, stable profile that allows shorter take-offs and level flight. The internal configuration of spars and ribs reflects realistic load distribution, with horizontal and vertical stabilizers proportioned for aerodynamic balance, weight optimization and structural efficiency.</p>
+                    <div class="pills"><span class="pill">NACA 2412</span><span class="pill">Spar / Rib</span><span class="pill">RC3 Competition</span></div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ============ COMPETITIONS ============ -->
+    <section id="competitions" class="section panel">
+      <div class="section-inner">
+        <div class="section-head" data-reveal>
+            <div>
+                <div class="sec-index">03 / Competitions</div>
+                <h2 class="sec-title">Design Under Pressure</h2>
+            </div>
+            <p>Timed, team-based aerospace design challenges, from 8-hour CAD sprints to full build-and-fly campaigns.</p>
+        </div>
+
+        <div class="work-list">
+
+            <article class="project" data-reveal>
+                <div class="project-media"><img src="Comp2.jpg" alt="Galforce glider, 1st place"></div>
+                <div class="project-body">
+                    <div class="proj-index">CATIA C3 2025 · ACU · SENIOR CATEGORY</div>
+                    <h3 class="proj-title">Galforce Long-Endurance Glider</h3>
+                    <div class="proj-sub">🏆 1st Place · Senior Category</div>
+                    <p class="proj-desc">Secured 1st Place in the Senior Category at the CATIA C3 2025 Aerospace Design Competition, hosted by the Toronto Metropolitan Aerospace Course Union (ACU), for Galforce, a propulsion-free 3-metre-wingspan glider modeled in CATIA V5 within an 8-hour limit for atmospheric and climate research. I led the design of the fuselage and modular payload bay, selecting carbon-fiber-reinforced composites to minimize weight while protecting scientific instruments.</p>
+                    <div class="pills"><span class="pill">1st Place</span><span class="pill">CATIA V5</span><span class="pill">8-Hour Sprint</span></div>
+                </div>
+            </article>
+
+            <article class="project reverse" data-reveal>
+                <div class="project-media"><img src="Comp1.jpg" alt="Astralis space robotics competition"></div>
+                <div class="project-body">
+                    <div class="proj-index">ASTRALIS 2025 · CASI TMU BRANCH</div>
+                    <h3 class="proj-title">The Future of Space Robotics</h3>
+                    <div class="proj-sub">Space Debris Mitigation</div>
+                    <p class="proj-desc">As part of a three-member team, I competed in Astralis: The Future of Robotics, hosted by CASI TMU, addressing space-debris accumulation in Low Earth Orbit (LEO) and Geostationary Orbit (GEO). In just 12 hours we developed a mitigation strategy for a hypothetical debris-generating collision, proposing a network of orbit-based sensor modules for real-time tracking and autonomous collision avoidance. We pitched our solution to judges from MDA Space, Rocket Lab and NordSpace.</p>
+                    <div class="pills"><span class="pill">Systems Design</span><span class="pill">12-Hour Sprint</span><span class="pill">Space Debris</span></div>
+                </div>
+            </article>
+
+            <article class="project" data-reveal>
+                <div class="project-media"><img src="Glider4.jpg" alt="AER507 glider competition"></div>
+                <div class="project-body">
+                    <div class="proj-index">AER507 · DESIGN · MANUFACTURE · FLIGHT</div>
+                    <h3 class="proj-title">NACA M22 Glider</h3>
+                    <div class="proj-sub">Furthest Distance, Least Weight</div>
+                    <p class="proj-desc">Designed and constructed a glider capable of flying the furthest possible distance while weighing the least. The wing was manufactured from a moulded NACA M22 airfoil, while all other components were CAD-designed and produced with laser cutting and 3D printing. The design met every requirement (length under 29.5 in, fuselage width under 2 in, tail fin under 30% of wing area) and survived all three flight attempts, scored on glide distance divided by final weight.</p>
+                    <div class="pills"><span class="pill">NACA M22</span><span class="pill">Laser Cut</span><span class="pill">3D Print</span></div>
+                    <a href="GliderReport.pdf" target="_blank" class="inline-link"><i class="fas fa-file-pdf"></i> Read the full report ↗</a>
+                    <div class="gallery" style="margin-top:20px">
+                        <img src="Glider1.jpg" alt="Glider build 1">
+                        <img src="Glider2.jpg" alt="Glider build 2">
+                        <img src="Glider3.JPG" alt="Glider build 3">
+                        <img src="Glider5.jpg" alt="Glider wing CAD">
+                    </div>
+                </div>
+            </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLUBS ============ -->
+    <section id="clubs" class="section">
+        <div class="section-head" data-reveal>
+            <div>
+                <div class="sec-index">04 / Clubs & Teams</div>
+                <h2 class="sec-title">Clubs &amp; Involvement</h2>
+            </div>
+            <p>Hands-on engineering with TMU's aerospace and high-speed transit design teams. Click any entry to read more.</p>
+        </div>
+
+        <!-- Hyperloop -->
+        <div class="org-group" id="org-hyperloop">
+            <div class="org-header" data-reveal><h3>Metropolitan Hyperloop</h3><span class="org-meta">Hyperloop</span></div>
+
+            <div class="sub-header" id="hyperloop-structures" data-reveal>Structures <span class="sub-meta">Current sub-team</span></div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">Structures Team</div><h4 class="club-title">Track Design</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">Designed a bolted structural steel support frame for the Hyperloop track, with columns, cross-members and gusseted corner plates anchored to a base-plate foundation.</p>
+                <div class="gallery"><img src="Track1.jpg" alt="Hyperloop track support frame, isometric view"><img src="Track2.jpg" alt="Hyperloop track frame, side view"><img src="Track3.jpg" alt="Hyperloop track frame with drive assembly mounted"></div>
+                <div class="acc-panel"><p>Ran <strong>static FEA</strong> to verify stress, deflection and factor of safety under load, validating the structure and de-risking the build before committing to material purchase.</p></div>
+            </div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">Structures Team</div><h4 class="club-title">Chassis Design</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">Designed an aluminium T-slot extrusion space-frame chassis for the pod, with modular bolted construction, gusseted joints and a reinforced upper arch.</p>
+                <div class="gallery"><img src="Chassis1.jpg" alt="Hyperloop chassis, isometric view with reinforced arch"><img src="Chassis2.jpg" alt="Hyperloop chassis, side frame view"><img src="Chassis3.jpg" alt="Hyperloop chassis, end view"></div>
+                <div class="acc-panel"><p>Performed <strong>static FEA</strong> as a preliminary check on structural stiffness and weight, de-risking the design ahead of parts procurement.</p></div>
+            </div>
+
+            <div class="sub-header" data-reveal>Research &amp; Development <span class="sub-meta">Previous sub-team</span></div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">Research & Development</div><h4 class="club-title">R&D Specialist</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">Conducted comprehensive feasibility studies for implementing Hyperloop infrastructure within Canada, analyzing geographic, economic and regulatory factors.</p>
+                <div class="gallery one"><img src="Hyperloop.jpg" alt="Hyperloop project"></div>
+                <div class="acc-panel"><p>I also actively researched vacuum-pump technology to optimize the depressurization systems required for the low-pressure Hyperloop tube environment.</p></div>
+            </div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">CAD Design & Aerodynamics</div><h4 class="club-title">Conceptual Pod Design</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">A conceptual CAD design of a Hyperloop passenger pod, heavily inspired by the aerodynamic efficiency of the Japanese Shinkansen (bullet train). The nose-cone profile was meticulously modeled in SolidWorks to minimize aerodynamic drag at near-supersonic speeds within the low-pressure tube.</p>
+                <div class="gallery"><img src="Pod_1.jpg" alt="Pod aerodynamic nose"><img src="Pod_2.jpg" alt="Pod body structure"><img src="Pod_3.jpg" alt="Pod rear assembly"></div>
+                <div class="acc-panel"><p>The current iteration focuses on the external aerodynamic shell and the structural ribbing required to withstand the pressure differential, with detailed work on the interior passenger cabin underway.</p></div>
+            </div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">Ergonomics & Passenger Comfort</div><h4 class="club-title">Interior Cabin & Seating</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">A custom high-speed transit seat inspired by luxury automotive and aerospace standards, prioritizing both ergonomics and space efficiency within the cylindrical hull constraints.</p>
+                <div class="gallery"><img src="Hyperloop_SeatAssembly.jpg" alt="Seats inside hull"><img src="Hyperloop_Seat1.jpg" alt="Seat iso view"><img src="Hyperloop_Seat2.jpg" alt="Seat front view"></div>
+                <div class="acc-panel"><p>The design features a contoured profile for long-duration comfort, integrated armrests and a deployable leg-support system. The assembly model demonstrates the fitment of these seats within the pod's fuselage, accounting for aisle clearance and structural mounting points.</p></div>
+            </div>
+        </div>
+
+        <!-- MARS -->
+        <div class="org-group" id="org-mars">
+            <div class="org-header" data-reveal><h3>Metropolitan Aerospace Rocket Society</h3><span class="org-meta">MARS</span></div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">Member & Lead in Training</div><h4 class="club-title">Rocketry: G-Class Solid-Fuel Rocket</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">As part of MARS for Fall 2024 and Winter 2025, I collaborated with a team to design, build and launch a high-powered G-Class solid-fuel rocket from scratch, through the full development cycle from conceptual design to manufacturing and successful flight.</p>
+                <div class="gallery"><img src="studentclub3.jpg" alt="MARS team photo"><img src="studentclub2.jpg" alt="Shiv with rocket"><img src="studentclub4.jpg" alt="Rocket on table"><img src="studentclub1.jpg" alt="Rocket launch"></div>
+                <div class="acc-panel"><p>During the Fall 2024 semester I was selected as a Lead in Training, shadowing the propulsion and aerostructures leads and gaining critical insight into project management, resource allocation and team coordination, which prepared me for greater technical responsibility in future launch campaigns.</p></div>
+            </div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">CAD & Systems Integration</div><h4 class="club-title">Avionics Bay Design</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">For the Winter 2025 term I designed a fully functional avionics bay for the rocket using my 3-D modeling knowledge, integrating essential electronics including a GPS module, a battery and the flight-computer board.</p>
+                <div class="gallery two"><img src="studentclub6.jpg" alt="Avionics bay cutaway"><img src="studentclub5.jpg" alt="Avionics bay tube"></div>
+                <div class="acc-panel"><p>Beyond housing these systems, the bay was engineered with practical safety in mind, featuring a half-inch bulkhead to safeguard against ejection charges during launch and at apogee.</p></div>
+            </div>
+        </div>
+
+        <!-- TMAD -->
+        <div class="org-group">
+            <div class="org-header" data-reveal><h3>Toronto Metropolitan Aero Design</h3><span class="org-meta">TMAD</span></div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">Aerostructures Team</div><h4 class="club-title">Aerostructures Member</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">As an active member of the Aerostructures team, I contributed directly to the hands-on manufacturing phase of our competition aircraft.</p>
+                <div class="gallery"><img src="TMAD1.jpg" alt="TMAD aircraft"><img src="TMAD2.jpg" alt="TMAD wing structure"><img src="TMAD3.jpg" alt="TMAD internal ribs"></div>
+                <div class="acc-panel"><p>My primary responsibilities included the precise manufacturing of the main wing structure, applying aerospace-grade epoxy resins for composite layups, and executing the critical mating processes to join major airframe components, ensuring structural integrity and aerodynamic flushness.</p></div>
+            </div>
+
+            <div class="club-entry" data-reveal data-acc>
+                <div class="club-entry-top">
+                    <div><div class="club-role">Structural Design & Build</div><h4 class="club-title">Composite Wing Skeletal Structure</h4></div>
+                    <span class="acc-chev">+</span>
+                </div>
+                <p class="club-desc">The internal spar-and-rib skeleton of the competition wing, the load-bearing framework that gives the airfoil its shape and structural strength before skinning.</p>
+                <div class="gallery one"><img src="WingSkeleton.jpg" alt="Composite wing skeletal structure, rib and spar framework"></div>
+                <div class="acc-panel"><p>Built the rib-and-spar internal structure that defines the wing's aerodynamic profile and distributes flight loads, balancing weight against stiffness ahead of the composite skin layup.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMMUNITY DEVELOPMENT & ENGAGEMENT (paid part-time role) ============ -->
+    <section id="community" class="section">
+        <div class="section-head" data-reveal>
+            <div>
+                <div class="sec-index">05 / Community</div>
+                <h2 class="sec-title">Community Development &amp; Engagement</h2>
+            </div>
+            <p>A paid, part-time role supporting the Faculty of Engineering &amp; Architectural Sciences residence community.</p>
+        </div>
+
+        <article class="feature" data-reveal data-acc-container>
+            <div>
+                <div class="feat-kicker">ACADEMIC LINK · PAID PART-TIME · TMU RESIDENCE</div>
+                <h3 class="feat-title">Student Advisor · Faculty of Engineering &amp; Architectural Sciences</h3>
+                <p class="feat-desc">I take pride in serving the TMU Residence community as the Student Advisor, representing the Faculty of Engineering and Architectural Sciences. In this role I oversee over 200 students in their transition to first year and serve as the primary point of contact for their academic and personal inquiries.</p>
+                <div class="acc-panel">
+                    <p>I also take pride in being someone students can confidently approach for guidance, mentorship and solutions. Through these experiences I have improved my leadership, problem-solving and communication skills by carefully assessing the needs of diverse students and providing thoughtful support that fosters both academic success and community well-being, all while managing my time across courses and extracurricular activities.</p>
+                </div>
+                <button class="acc-toggle" data-acc-toggle type="button">
+                    <span class="acc-label">Read more</span><span class="acc-chev">+</span>
+                </button>
+            </div>
+            <div class="gallery two">
+                <img src="AL.1.jpg" alt="Academic Link portrait">
+                <img src="AL.2.jpg" alt="Academic Link team presentation">
+                <img src="AL.3.jpg" alt="Academic Link team">
+            </div>
+        </article>
+
+        <div class="club-entry" data-reveal data-acc>
+            <div class="club-entry-top">
+                <div><div class="club-role">Industry Outreach Specialist · CASI</div><h4 class="club-title">Canadian Aeronautics &amp; Space Institute (TMU Branch)</h4></div>
+                <span class="acc-chev">+</span>
+            </div>
+            <p class="club-desc">As the Industry Outreach Specialist for the CASI TMU Branch, I serve as a bridge between the student body and the broader aerospace industry, facilitating professional development opportunities by connecting students with industry leaders and organizations.</p>
+            <div class="gallery"><img src="CASI.1.jpg" alt="CASI team presentation"><img src="CASI.2.jpg" alt="CASI networking event"><img src="CASI.3.jpg" alt="CASI industry panel"><img src="CASI.4.jpg" alt="CASI event"></div>
+            <div class="acc-panel"><p>My responsibilities include organizing networking events, securing guest speakers from top aerospace companies, and fostering partnerships that lead to mentorship and internship opportunities. This role has sharpened my communication skills and expanded my professional network within the Canadian aerospace sector.</p></div>
+        </div>
+    </section>
+
+    <!-- ============ VOLUNTEERING ============ -->
+    <section id="volunteering" class="section panel">
+      <div class="section-inner">
+        <div class="section-head" data-reveal>
+            <div>
+                <div class="sec-index">06 / Volunteering</div>
+                <h2 class="sec-title">Giving Back</h2>
+            </div>
+            <p>Mentorship and outreach across the faculty, inspiring the next generation of engineers.</p>
+        </div>
+
+        <div class="club-entry" data-reveal data-acc>
+            <div class="club-entry-top">
+                <div><div class="club-role">FuturENG Mentor · FEAS Outreach</div><h4 class="club-title">Engineering Student Ambassador</h4></div>
+                <span class="acc-chev">+</span>
+            </div>
+            <p class="club-desc">On November 16th, FEAS Outreach hosted the 2024 "FuturENG" event for women in STEM in grades 9 to 12, supported by HydroOne through the WEMADEIT program. As a mentor, I guided highly motivated students as they explored engineering through hands-on workshops.</p>
+            <div class="gallery"><img src="volunteer1.jpg" alt="FuturENG event 1"><img src="volunteer2.jpg" alt="FuturENG event 2"><img src="volunteer3.jpg" alt="FuturENG event 3"></div>
+            <div class="acc-panel"><p>I mentored students in crafting and designing electric vehicles using materials produced in our cutting-edge labs, helping them navigate the challenges that arose during manufacturing and design.</p></div>
+        </div>
+
+        <div class="club-entry" data-reveal data-acc>
+            <div class="club-entry-top">
+                <div><div class="club-role">Student Ambassador · TMU Open House</div><h4 class="club-title">Faculty Tours & Outreach</h4></div>
+                <span class="acc-chev">+</span>
+            </div>
+            <p class="club-desc">As a Student Ambassador during the TMU Open House, I acted as the face of the university for thousands of visitors, helping create a welcoming environment for potential applicants and their families.</p>
+            <div class="acc-panel"><p>I guided tours of our engineering facilities, provided detailed information about the aerospace program, and engaged visitors in meaningful conversations about the innovative and inclusive culture at Toronto Metropolitan University.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+        <div class="about-grid">
+            <div class="about-img" data-reveal>
+                <img src="About.jpg" alt="Shiv Patel">
+                <div class="fade"></div>
+            </div>
+            <div data-reveal>
+                <div class="sec-index">07 / About</div>
+                <h2 class="about-h2">The curiosity to understand how things fly.</h2>
+                <p class="about-p">I am a 3rd-year Aerospace Engineering student at Toronto Metropolitan University, passionate about aerodynamics, CAD design and propulsion systems. My journey in engineering is driven by a curiosity to understand how things fly and a desire to build the next generation of aerospace vehicles.</p>
+                <p class="about-p">When I am not designing in CATIA or SolidWorks, I am actively involved in student leadership, mentoring first-year students and connecting my peers with industry professionals through CASI.</p>
+                <div class="skill-pills">
+                    <span class="skill">SolidWorks</span>
+                    <span class="skill">CATIA V5</span>
+                    <span class="skill">MATLAB / Simulink</span>
+                    <span class="skill">Aerodynamics</span>
+                    <span class="skill">Manufacturing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT / FOOTER ============ -->
+    <footer id="contact" class="contact">
+        <div class="grid-overlay"></div>
+        <div class="contact-inner">
+            <div class="sec-index" data-reveal>08 / Let's build something</div>
+            <h2 data-reveal>Open to internships in aircraft design &amp; manufacturing.</h2>
+            <div class="contact-btns" data-reveal>
+                <a href="mailto:s70patel@torontomu.ca" class="btn btn-primary">EMAIL ME →</a>
+                <a href="ShivPatel_Resume.pdf" target="_blank" class="btn btn-ghost">DOWNLOAD RÉSUMÉ ↗</a>
+                <a href="https://www.linkedin.com/in/shiv-pinteshkumar-patel" target="_blank" rel="noopener" class="btn btn-ghost" id="linkedin-link">LINKEDIN ↗</a>
+            </div>
+            <div class="foot-row">
+                <span>© Shiv Pinteshkumar Patel · 2026</span>
+                <span>Toronto Metropolitan University · Aerospace Eng.</span>
+            </div>
+        </div>
     </footer>
 
+    <script src="portfolio.js"></script>
 </body>
 </html>
-
